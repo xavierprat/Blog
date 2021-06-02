@@ -1,29 +1,28 @@
 ---
-title: "Asking open ended: Say 5 items "
-description: |
-  Analysis of asking students 5 items related to a topic 
-author:
-  - name: Xavier Prat-Resina 
-    url: https://pratresina.umn.edu
-    affiliation: University of Minnesota Rochester
-    affiliation_url: https://www.r.umn.edu
-date: 06-02-2021
+title: "Analyzing the open ended questions in CHEM1331"
+author: "Xavier Prat-Resina"
+date: "12/24/2019"
 output:
-  distill::distill_article:
-    self_contained: false
+  html_document:
+    fig_caption: yes
+    highlight: tango
+    number_sections: yes
+    theme: united
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating blogs with Distill at:
-# https://rstudio.github.io/distill/blog.html
+knitr::opts_chunk$set(echo = TRUE)
 library(psych)
 library(knitr)
 ```
 
-# Introduction
-
+#Introduction
 Analyzing the results from the first semester of implementing the open ended assessments as they had been described in 
 "Establishing open-ended assessments: investigating the validity of creative exercises"
 SE Lewis, JL Shaw, KA Freeman - Chem. Educ. Res. Pract., 2011, 12, 158-166 (https://doi.org/10.1039/C1RP90020J)
@@ -36,10 +35,9 @@ Students were asked to name five relevant things about certain topics. For examp
 
 * Exam 3: Given three skeletal structures of biomolecules "Make 5 relevant and true statements about the three molecules below"
 
-# Analysis
+#Analysis
 
 Let's load the data and clean it up a little bit. All the information is in the "all" dataframe
-
 ```{r , echo=TRUE, message= TRUE, warning=FALSE}
 setwd("~/Gd/Research/OpenEnded5relevantThings/")
  
@@ -59,8 +57,7 @@ all$Email <- NULL
 all$meanOE = rowMeans(subset(all,select = c("Score.x","Score.y","Score")),na.rm = TRUE)
 ```
 
-## Overall O.E. grade distribution
-
+##Overall O.E. grade distribution
 On a total grade of 5 points, if we average the score of each student over exam 1, 2, and 3 we can see that most students obtain an average between 2.5 and 4.
 
 ```{r , echo=TRUE, message= TRUE, warning=FALSE}
@@ -69,10 +66,9 @@ hist(all$meanOE, main="Average grade of Op End in Exam 1,2,3")
 
 ```
 
-## Correlating performance in O.E. and course grades
+##Correlating performance in O.E. and course grades
 
 If we plot performance in O.E. vs final grades we obtain a significant positive correlation
-
 ```{r,echo=TRUE, message= TRUE, warning=FALSE}
 #remove students who dont have a final grade
 allNAfinal = all[!is.na(all$MAX),]
@@ -98,21 +94,19 @@ kable(r2table)
 
 ```
 
-## Letter grades groups and performance in OE
+##Letter grades groups and performance in OE
 
 We can analyze the performance in OE for different letter grades. The number of students obtaining C and D are too low and the noise is too high.
-
 ```{r,echo=TRUE, message= TRUE, warning=FALSE}
 describeBy( allNAfinal$meanOE , allNAfinal$LETTER )
 boxplot(allNAfinal$meanOE ~ allNAfinal$LETTER, las=2,ylab="Average OE")
 ```
 And we can also run an ANOVA among the different letter grades and we see significant difference between many letter groups. Check the column "p adj" for the p value
-
 ```{r,echo=TRUE, message= TRUE, warning=FALSE}
 TukeyHSD( aov(allNAfinal$meanOE ~ allNAfinal$LETTER))
 ```
 
-## Two different types of mistakes in OE
+##Two different types of mistakes in OE
 
 There are two main reasons why students would not get full marks for each statement
 
@@ -120,7 +114,6 @@ There are two main reasons why students would not get full marks for each statem
 * Statement is not true
 
 We can calculate the average of times that student made those two types of mistakes
-
 ```{r,echo=TRUE, message= TRUE, warning=FALSE}
 #students with high instances of answers being not relevant
 notRelevant <- all[,grepl("not.relevant", colnames(all))]
@@ -137,7 +130,6 @@ allNAfinal = all[!is.na(all$MAX),]
 
 And we can see how making those two types of mistakes correlates with the other course performance. The table below is with "Not True" mistakes.
 Notice that the correlation in both types of mistakes is, as expected, negative, which means that the higher the number of mistakes the lower the performance in the course.
-
 ```{r,echo=TRUE, message= TRUE, warning=FALSE}
 
 r2<-cor(allNAfinal$notTrue, allNAfinal$MAX )
@@ -174,8 +166,6 @@ abline(lm(allNAfinal$MAX~ allNAfinal$notRelevant))
 legend(x='bottomright',legend=paste("Cor=",round(r2,4)))
 ```
 
-# Conclusions
+#Conclusions
 
 It does make sense that performance in Open Ended assessments correlates positively with all the grade categories in the course. As for the types of mistakes, making "not true" mistakes in these type of questions correlates better with performance in the course.
-
-
