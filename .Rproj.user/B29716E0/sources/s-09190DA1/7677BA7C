@@ -1,14 +1,14 @@
 {
-    "id": "34C2DF82",
-    "path": "/Volumes/GoogleDrive/My Drive/Edits/WebDistill/Blog/index.Rmd",
-    "project_path": "index.Rmd",
+    "id": "7677BA7C",
+    "path": "/Volumes/GoogleDrive/My Drive/Edits/WebDistill/Blog/_posts/welcome/welcome.Rmd",
+    "project_path": "_posts/welcome/welcome.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1291041739",
     "contents": "",
     "dirty": false,
-    "created": 1622656086186.0,
+    "created": 1622656775176.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source"
