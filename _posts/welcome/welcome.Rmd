@@ -10,7 +10,12 @@ author:
 date: 06-02-2021
 output:
   distill::distill_article:
+    fig_caption: yes
+    number_sections: yes
     self_contained: false
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -24,13 +29,19 @@ library(knitr)
 
 # Introduction
 
-Analyzing the results from the first semester of implementing the open ended assessments as they had been described in 
+The following data was collected during the fall semester of 2019 from a cohort of about 200 first-year students taking a first-year chemistry semester.
+We are analyzing here the results of implementing the open ended assessments as they had been described in 
 "Establishing open-ended assessments: investigating the validity of creative exercises"
 SE Lewis, JL Shaw, KA Freeman - Chem. Educ. Res. Pract., 2011, 12, 158-166 (https://doi.org/10.1039/C1RP90020J)
 
-Students were asked to name five relevant things about certain topics. For example:
+During these "open Ended questions" (OE) students are asked to name 5 relevant statements about a topic.
+Students had practiced similar questions at the beginning of each class session. During the three semester exams they were asked to name five relevant things about certain topics. For example:
 
 * Exam 1: Given a table of "Mass atom" and "Natural abundance" for two unknown elements they were asked "Below are shown the isotopic breakdown of 2 different elements. Make 5 relevant statements about these two samples"
+
+```{r}
+#knitr::include_graphics("images/exam1_table.png")
+```
 
 * Exam 2: Make 5 relevant and true statements about the organic compound shown below. CH3CH(CH3)CH2CHO
 

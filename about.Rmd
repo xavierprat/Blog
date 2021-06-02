@@ -7,4 +7,6 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-My personal website is here: https://pratresina.umn.edu
+This is where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. 
+And then a new fire needs to be put out and the results remain among my notes, to never see the light again.
+Well, this is an unfiltered version of those notes. Keep in mind, they're dead.

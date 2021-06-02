@@ -112,12 +112,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Asking open ended: Say 5 items "]},{"type":"character","attributes":{},"value":["Analysis of asking students 5 items related to a topic"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Xavier Prat-Resina"]},{"type":"character","attributes":{},"value":["https://pratresina.umn.edu"]},{"type":"character","attributes":{},"value":["University of Minnesota Rochester"]},{"type":"character","attributes":{},"value":["https://www.r.umn.edu"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Asking open ended: Say 5 items "]},{"type":"character","attributes":{},"value":["Analysis of asking students 5 items related to a topic"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Xavier Prat-Resina"]},{"type":"character","attributes":{},"value":["https://pratresina.umn.edu"]},{"type":"character","attributes":{},"value":["University of Minnesota Rochester"]},{"type":"character","attributes":{},"value":["https://www.r.umn.edu"]}]}]},{"type":"character","attributes":{},"value":["06-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["fig_caption","number_sections","self_contained","toc","toc_depth","toc_float"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["welcome_files/anchor-4.2.2/anchor.min.js","welcome_files/bowser-1.9.3/bowser.min.js","welcome_files/distill-2.2.21/template.v2.js","welcome_files/figure-html5/unnamed-chunk-2-1.png","welcome_files/figure-html5/unnamed-chunk-3-1.png","welcome_files/figure-html5/unnamed-chunk-5-1.png","welcome_files/figure-html5/unnamed-chunk-8-1.png","welcome_files/figure-html5/unnamed-chunk-9-1.png","welcome_files/header-attrs-2.8/header-attrs.js","welcome_files/jquery-1.11.3/jquery.min.js","welcome_files/popper-2.6.0/popper.min.js","welcome_files/tippy-6.2.7/tippy-bundle.umd.min.js","welcome_files/tippy-6.2.7/tippy-light-border.css","welcome_files/tippy-6.2.7/tippy.css","welcome_files/tippy-6.2.7/tippy.umd.min.js","welcome_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/exam1_table.png","welcome_files/anchor-4.2.2/anchor.min.js","welcome_files/bowser-1.9.3/bowser.min.js","welcome_files/distill-2.2.21/template.v2.js","welcome_files/figure-html5/unnamed-chunk-10-1.png","welcome_files/figure-html5/unnamed-chunk-2-1.png","welcome_files/figure-html5/unnamed-chunk-3-1.png","welcome_files/figure-html5/unnamed-chunk-4-1.png","welcome_files/figure-html5/unnamed-chunk-5-1.png","welcome_files/figure-html5/unnamed-chunk-6-1.png","welcome_files/figure-html5/unnamed-chunk-8-1.png","welcome_files/figure-html5/unnamed-chunk-9-1.png","welcome_files/header-attrs-2.8/header-attrs.js","welcome_files/jquery-1.11.3/jquery.min.js","welcome_files/popper-2.6.0/popper.min.js","welcome_files/tippy-6.2.7/tippy-bundle.umd.min.js","welcome_files/tippy-6.2.7/tippy-light-border.css","welcome_files/tippy-6.2.7/tippy.css","welcome_files/tippy-6.2.7/tippy.umd.min.js","welcome_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2098,11 +2098,32 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<h1 id="introduction">Introduction</h1>
-<p>Analyzing the results from the first semester of implementing the open ended assessments as they had been described in “Establishing open-ended assessments: investigating the validity of creative exercises” SE Lewis, JL Shaw, KA Freeman - Chem. Educ. Res. Pract., 2011, 12, 158-166 (<a href="https://doi.org/10.1039/C1RP90020J" class="uri">https://doi.org/10.1039/C1RP90020J</a>)</p>
-<p>Students were asked to name five relevant things about certain topics. For example:</p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
 <ul>
-<li><p>Exam 1: Given a table of “Mass atom” and “Natural abundance” for two unknown elements they were asked “Below are shown the isotopic breakdown of 2 different elements. Make 5 relevant statements about these two samples”</p></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#analysis">Analysis</a>
+<ul>
+<li><a href="#overall-o.e.-grade-distribution">Overall O.E. grade distribution</a></li>
+<li><a href="#correlating-performance-in-o.e.-and-course-grades">Correlating performance in O.E. and course grades</a></li>
+<li><a href="#letter-grades-groups-and-performance-in-oe">Letter grades groups and performance in OE</a></li>
+<li><a href="#two-different-types-of-mistakes-in-oe">Two different types of mistakes in OE</a></li>
+</ul></li>
+<li><a href="#conclusions">Conclusions</a></li>
+</ul>
+</nav>
+</div>
+<h1 id="introduction">Introduction</h1>
+<p>The following data was collected during the fall semester of 2019 from a cohort of about 200 first-year students taking a first-year chemistry semester. We are analyzing here the results of implementing the open ended assessments as they had been described in “Establishing open-ended assessments: investigating the validity of creative exercises” SE Lewis, JL Shaw, KA Freeman - Chem. Educ. Res. Pract., 2011, 12, 158-166 (<a href="https://doi.org/10.1039/C1RP90020J" class="uri">https://doi.org/10.1039/C1RP90020J</a>)</p>
+<p>During these “open Ended questions” (OE) students are asked to name 5 relevant statements about a topic. Students had practiced similar questions at the beginning of each class session. During the three semester exams they were asked to name five relevant things about certain topics. For example:</p>
+<ul>
+<li>Exam 1: Given a table of “Mass atom” and “Natural abundance” for two unknown elements they were asked “Below are shown the isotopic breakdown of 2 different elements. Make 5 relevant statements about these two samples”</li>
+</ul>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<ul>
 <li><p>Exam 2: Make 5 relevant and true statements about the organic compound shown below. CH3CH(CH3)CH2CHO</p></li>
 <li><p>Exam 3: Given three skeletal structures of biomolecules “Make 5 relevant and true statements about the three molecules below”</p></li>
 </ul>
@@ -2137,7 +2158,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>all</span><span class='op'>$</span><span class='va'>meanOE</span>, main<span class='op'>=</span><span class='st'>"Average grade of Op End in Exam 1,2,3"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="welcome_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+<p><img src="welcome_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <h2 id="correlating-performance-in-o.e.-and-course-grades">Correlating performance in O.E. and course grades</h2>
 <p>If we plot performance in O.E. vs final grades we obtain a significant positive correlation</p>
@@ -2151,7 +2172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>'bottomright'</span>,legend<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Cor="</span>,<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>r2</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="welcome_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+<p><img src="welcome_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <p>We can also find for other grade categories that correlate better with O.E. than final grades. For obvious reasons, the highest correlation is with the open ended written exams as the O.E. questions are part of it.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2267,7 +2288,7 @@ X1 0.67</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>allNAfinal</span><span class='op'>$</span><span class='va'>meanOE</span> <span class='op'>~</span> <span class='va'>allNAfinal</span><span class='op'>$</span><span class='va'>LETTER</span>, las<span class='op'>=</span><span class='fl'>2</span>,ylab<span class='op'>=</span><span class='st'>"Average OE"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="welcome_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+<p><img src="welcome_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <p>And we can also run an ANOVA among the different letter grades and we see significant difference between many letter groups. Check the column “p adj” for the p value</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2376,7 +2397,7 @@ F-D-   1.16666667 -1.39397771  3.727311039 0.9222908</code></pre>
 </code></pre>
 </div>
 <table>
-<caption><span id="tab:unnamed-chunk-8">Table 1: </span>Correlation with Not True mistakes</caption>
+<caption><span id="tab:unnamed-chunk-9">Table 1: </span>Correlation with Not True mistakes</caption>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Final.grade</th>
@@ -2406,7 +2427,7 @@ F-D-   1.16666667 -1.39397771  3.727311039 0.9222908</code></pre>
 <span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>'bottomright'</span>,legend<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Cor="</span>,<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>r2</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="welcome_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+<p><img src="welcome_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <p>And this table is with “Not relevant” mistakes</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2423,7 +2444,7 @@ F-D-   1.16666667 -1.39397771  3.727311039 0.9222908</code></pre>
 </code></pre>
 </div>
 <table>
-<caption><span id="tab:unnamed-chunk-9">Table 2: </span>Correlation with Not True mistakes</caption>
+<caption><span id="tab:unnamed-chunk-10">Table 2: </span>Correlation with Not True mistakes</caption>
 <thead>
 <tr class="header">
 <th style="text-align: right;">Final.grade</th>
@@ -2453,7 +2474,7 @@ F-D-   1.16666667 -1.39397771  3.727311039 0.9222908</code></pre>
 <span class='fu'><a href='https://rdrr.io/r/graphics/legend.html'>legend</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>'bottomright'</span>,legend<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Cor="</span>,<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>r2</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="welcome_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+<p><img src="welcome_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <h1 id="conclusions">Conclusions</h1>
 <p>It does make sense that performance in Open Ended assessments correlates positively with all the grade categories in the course. As for the types of mistakes, making “not true” mistakes in these type of questions correlates better with performance in the course.</p>
