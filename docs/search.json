@@ -3,17 +3,22 @@
     {
       "path": "about.html",
       "title": "About Xavier's blog",
-      "author": [],
-      "contents": "\nThis is not my website (https://pratresina.umn.edu). This is just a collection of musing, the place where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. And then a new fire needs to be put out and the results remain among my notes, to never see the light again. Well, this is an unfiltered version of those notes. Keep in mind, they’re dead.\n\n\n\n",
-      "last_modified": "2021-06-02T19:44:49-05:00"
+      "author": [
+        {
+          "name": "Xavier Prat-Resina",
+          "url": "https://pratresina.umn.edu"
+        }
+      ],
+      "contents": "\nMy name is Xavier Prat-Resina and I am an Associate Professor of Chemistry at the University of Minnesota Rochester (UMR). I enjoy coding for data analysis, web design, and molecular modelling.\nThis is just a collection of musings, half-cooked analysis with python/R scripts, and reports that could have been submitted to a journal… and never did. The place where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. And then a new fire needs to be put out and the results remain among my notes, to never see the light again. Well, this is an unfiltered version of those notes. Keep in mind, they’re dead.\n\n\n\n",
+      "last_modified": "2021-06-03T12:22:53-05:00"
     },
     {
       "path": "index.html",
       "title": "Prat-Resina's blog",
-      "description": "A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.\n",
+      "description": "A list of musings, half-cooked analysis, and reports that could have been submitted to a journal... and never did.\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-06-02T19:44:50-05:00"
+      "last_modified": "2021-06-03T12:22:54-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

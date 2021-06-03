@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Prat-Resina's blog</title>
+    <link>https://xavierprat.github.io/Blog</link>
+    <atom:link href="https://xavierprat.github.io/Blog/index.xml" rel="self" type="application/rss+xml"/>
+    <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The four horsemen of curriculum innovation apocalypse</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/the_four_horsemen</link>
+      <description>What everyone should take into account before investing in curriculum change</description>
+      <category>Curriculum</category>
+      <guid>https://xavierprat.github.io/Blog/posts/the_four_horsemen</guid>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/the_four_horsemen/Apocalypse_vasnetsov.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Open ended questions: Name 5 relevant items</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/openended_5_items</link>
+      <description>Analysis of asking students to name 5 relevant statement pertinent to a topic</description>
+      <category>R</category>
+      <category>Assessment</category>
+      <guid>https://xavierprat.github.io/Blog/posts/openended_5_items</guid>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/openended_5_items/openended_5_items_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+  </channel>
+</rss>

@@ -7,18 +7,19 @@ author:
     url: https://pratresina.umn.edu
     affiliation: University of Minnesota Rochester
     affiliation_url: https://www.r.umn.edu
+    orcid_id: 0000-0002-1380-6025
 categories:
   - R
   - Assessment
-date: 06-02-2021
+date: 01-15-2020
 output:
   distill::distill_article:
-    fig_caption: yes
-    number_sections: yes
+    toc: true
+    toc_float: true
+    code_folding: true
+    fig_caption: true
+    number_sections: true
     self_contained: false
-    toc: yes
-    toc_depth: 3
-    toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -42,13 +43,13 @@ Students had practiced similar questions at the beginning of each class session.
 
 * Exam 1: Given a table of "Mass atom" and "Natural abundance" for two unknown elements they were asked "Below are shown the isotopic breakdown of 2 different elements. Make 5 relevant statements about these two samples"
 
-```{r}
-#knitr::include_graphics("images/exam1_table.png")
-```
+<img src="images/exam1_table.png">
 
 * Exam 2: Make 5 relevant and true statements about the organic compound shown below. CH3CH(CH3)CH2CHO
 
 * Exam 3: Given three skeletal structures of biomolecules "Make 5 relevant and true statements about the three molecules below"
+
+<img src="images/ex3.png">
 
 # Analysis
 

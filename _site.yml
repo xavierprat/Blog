@@ -2,16 +2,24 @@ name: "Blog"
 title: "Prat-Resina's blog"
 description: |
   A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
+base_url: https://xavierprat.github.io/Blog
 output_dir: "docs"
 navbar:
+  logo: 
+    image: umn.png
+    href: https://pratresina.umn.edu
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
+    - icon: fab fa-github
+      href: https://github.com/xavierprat/Blog
 collections:
   posts:
     categories: true
     categories_metadata: false
     authors_metadata: false
+    share: [twitter, linkedin]
+    citations: true
 output: distill::distill_article

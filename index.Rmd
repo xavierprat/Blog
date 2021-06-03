@@ -1,7 +1,7 @@
 ---
 title: "Prat-Resina's blog"
 description: |
-  A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
+  A list of musings, half-cooked analysis, and reports that could have been submitted to a journal... and never did.
 site: distill::distill_website
 listing: posts
 ---
