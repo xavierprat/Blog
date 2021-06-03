@@ -1,12 +1,15 @@
 ---
-title: "Asking open ended: Say 5 items "
+title: "Open ended questions: Name 5 relevant items"
 description: |
-  Analysis of asking students 5 items related to a topic 
+  Analysis of asking students to name 5 relevant statement pertinent to a topic 
 author:
   - name: Xavier Prat-Resina 
     url: https://pratresina.umn.edu
     affiliation: University of Minnesota Rochester
     affiliation_url: https://www.r.umn.edu
+categories:
+  - R
+  - Assessment
 date: 06-02-2021
 output:
   distill::distill_article:

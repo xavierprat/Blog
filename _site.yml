@@ -1,7 +1,7 @@
 name: "Blog"
-title: "Blog"
+title: "Prat-Resina's blog"
 description: |
-  Blog
+  A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 output_dir: "docs"
 navbar:
   right:
@@ -9,4 +9,9 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
+collections:
+  posts:
+    categories: true
+    categories_metadata: false
+    authors_metadata: false
 output: distill::distill_article

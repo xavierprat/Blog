@@ -4,15 +4,16 @@
       "path": "about.html",
       "title": "About Xavier's blog",
       "author": [],
-      "contents": "\nThis is where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. And then a new fire needs to be put out and the results remain among my notes, to never see the light again. Well, this is an unfiltered version of those notes. Keep in mind, they’re dead.\n\n\n\n",
-      "last_modified": "2021-06-02T16:48:46-05:00"
+      "contents": "\nThis is not my website (https://pratresina.umn.edu). This is just a collection of musing, the place where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. And then a new fire needs to be put out and the results remain among my notes, to never see the light again. Well, this is an unfiltered version of those notes. Keep in mind, they’re dead.\n\n\n\n",
+      "last_modified": "2021-06-02T19:44:49-05:00"
     },
     {
       "path": "index.html",
-      "title": "Blog",
+      "title": "Prat-Resina's blog",
+      "description": "A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-06-02T16:48:47-05:00"
+      "last_modified": "2021-06-02T19:44:50-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
