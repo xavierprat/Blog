@@ -1,0 +1,530 @@
+---
+title: "Analysis of seven years of General Chemistry student data"
+description: |
+  Trying to make sense of student performance and identifying possible predictors of academic success.
+author:
+  - name: Xavier Prat-Resina 
+    url: https://pratresina.umn.edu
+    affiliation: University of Minnesota Rochester
+    affiliation_url: https://r.umn.edu
+    orcid_id: 0000-0002-1380-6025
+categories:
+  - Curriculum
+  - R
+date: 08-10-2018
+output:
+  distill::distill_article:
+    number_sections: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    fig_caption: true
+    code_folding: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Abstract
+Between Fall 2010 and Spring 2018 I taught the two semester sequence of General Chemistry (GC).
+The way our curriculum was structured, these two semesters were usually taken during
+the sophomore year for students majoring in a Bachelor of Sciences in Health Sciences.
+
+During all this time, while the chemistry content has not changed significantly, 
+the forms of delivery and assessment have been evolving towards, hopefully, better 
+pedagogies of engagment and towards a clearer assessment of learning objectives.
+Probably the most remarkable change was flipping the class with videos in the fall of 2014.
+
+# Overview Final Course grades
+
+Let's just look at how students have performed in the two GC semesters by looking at their final grade 
+in different semesters. 
+
+IMPORTANT: We will see statistical significance between years and other demographics when analyzing
+the final percent grade. However, when we analyze the letter grade, those significances disappear.
+This is important because when a student is disengaged their score may be 60% or 5%, and while the means
+and medians may be affected, the letter grade analysis will not.
+Also, during the semester of Fall 2011 - Spring 2012 the laboratory was still a different course, this means
+that the criteria for a passing grade was not 70%, but lower.
+
+## Comparing means by semester
+
+``` {r , echo=FALSE, message= FALSE, warning=FALSE}
+setwd("~/Gd/Research/StudentData/Discover")
+
+#Load demographics for all years
+allGC1 <- read.csv("./genchem1_nosummer_11_16.csv",header=TRUE)
+allGC2 <- read.csv("./genchem2_11_17.csv",header=TRUE)
+allGC1_ <- read.csv("./genchem1_nosummer_11_16_mergedsex.csv",header = TRUE)
+allGC2_ <- read.csv("./genchem2_11_17_mergedsex.csv",header = TRUE)
+
+library(psych)
+mata<-describeBy(allGC1$TG_Total.Grade....,allGC1$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1")
+
+mata<-describeBy(allGC2$TG_Total.Grade....,allGC2$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem2")
+
+```
+
+## Graphically by semester
+
+``` {r , echo=FALSE, message= FALSE, warning=FALSE}
+library(ggplot2)
+ggplot(allGC1, aes(x=TG_Total.Grade...., fill=Semester))+geom_histogram()+ggtitle("GenChem1 by semester")
+ggplot(allGC2, aes(x=TG_Total.Grade...., fill=Semester))+geom_histogram()+ggtitle("GenChem2")
+```
+
+## Statiscal analysis by semester
+
+``` {r , echo=FALSE, message= FALSE}
+a<- TukeyHSD( aov(allGC1$TG_Total.Grade.... ~ allGC1$Semester)) 
+b<-as.data.frame(a$`allGC1$Semester`)
+knitr::kable(b, caption = "Anova. GenChem1 Grade among semesters")
+a<- TukeyHSD( aov(allGC2$TG_Total.Grade.... ~ allGC2$Semester)) 
+b<-as.data.frame(a$`allGC2$Semester`)
+knitr::kable(b, caption = "Anova. GenChem2 Grade among semesters")
+```
+
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+#install.packages("ggpubr")
+library(ggpubr)
+ggboxplot(allGC1, x = "Semester", y = "TG_Total.Grade....",  title = "Final grade in GC1",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1$TG_Total.Grade....), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(allGC2, x = "Semester", y = "TG_Total.Grade....",  title = "Final grade in GC2",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC2$TG_Total.Grade....), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+```
+
+## Other grades besides final grade
+
+.
+
+### Letter grades
+
+I converted the letter grades into the 4-scale. The plot should only show 4, 3.66, 3.33, 3... but it seems to add more variability... 
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+#need to load this other file, as it contains the letter grades
+allGC1_bosco <- read.csv("~/Research/StudentData/XavierData/Clean/allGC1.csv",header = TRUE)
+
+a<- allGC1_bosco$Final.letter
+a <- gsub("A\\-", 3.667,a)
+a <- gsub("A", 4.000,a)
+a <- gsub("B\\+", 3.333,a)
+a <- gsub("B\\-", 2.667,a)
+a <- gsub("B", 3.000,a)
+a <- gsub("C\\+", 2.333,a)
+a <- gsub("C\\-", 1.667,a)
+a <- gsub("C", 2.000,a)
+a <- gsub("D\\+", 1.333,a)
+a <- gsub("D", 1.000,a)
+a <- gsub("F", 0.000,a)
+a <- gsub("I", 0.000,a)
+allGC1_bosco$Final.letter.number <- as.numeric(as.character(a))
+ggboxplot(allGC1_bosco, x = "Semester", y = "Final.letter.number",  title = "Final letter grade in GC1",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1_bosco$Final.letter.number), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 5 ) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+```
+
+### Semester exams and previous exams
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+setwd("~/Gd/Research/StudentData/Discover")
+prePost <- read.csv("/Users/xavier/Gd/Research/StudentData/ExamPrePost.csv",header=TRUE,sep = "\t")
+source("~/Gd/Research/R/deid.R")
+prePost <- deIdThis(prePost)
+write.csv(prePost,file="prePost.csv")
+prePost <- read.csv("./prePost.csv", header = TRUE)
+prePost$inc1<-prePost$Grade1-prePost$Mid1
+prePost$inc2<-prePost$Grade2-prePost$Mid2
+prePost$inc3<-prePost$Grade3-prePost$Mid3
+prePost$meanInc <- rowMeans( prePost[c('inc1','inc2','inc3')])
+prePost$meanExam <- rowMeans( prePost[c('Grade1','Grade2','Grade3')])
+```
+
+The final exam is a second opportunity for students to improve their semester exams. Let's measure how exams score and improvement evolved through the years.
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+ggboxplot(prePost, x = "Semester", y = "meanExam",  title = "Average grade in final exams",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(prePost$meanExam), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 105 ) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+```
+
+This is plots the increment
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+ggboxplot(prePost, x = "Semester", y = "meanInc",  title = "Average increment from semester exams to final",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(prePost$meanInc), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 40 ) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+```
+
+There's something funky about some of these numbers. Fall 2014 doesn't seem to apply the >40% rule, which I actually implemented.
+
+So let's check that I obtain the same result if I plot grade exams from BoSCO data
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+allGC1_bosco$meanExam <-  rowMeans( allGC1_bosco[c('Exam1','Exam2','Exam3')], na.rm=TRUE)
+
+ggboxplot(allGC1_bosco, x = "Semester", y = "meanExam",  title = "Average grade in final exams (Bosco source)",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1_bosco$meanExam), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 105 ) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+```
+
+# Predictors of performance in Chemistry
+
+There are different variables that we want to look at. Performance factors such as ACT scores or GPA or High School rank , as well as demographic factors such as ethnicity and first-year generation.
+
+## Math ACT is a good predictor
+
+```{r, echo=FALSE,message=FALSE}
+mata<-describeBy(allGC1$DEM_ACT.MATH,allGC1$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "ACT Math - Fall sophomore")
+mata<-describeBy(allGC2$DEM_ACT.MATH,allGC2$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "ACT Math - Spring sophomore")
+```
+
+We see that the second semester is a subselection of the first semester with a higher ACT math score. 
+Therefore, we can just use GenChem1 for the analysis.
+
+### Was math ACT different through the years?
+
+As we can see below. There is no significant difference in ACT throughout the years
+
+``` {r , echo=FALSE, message= FALSE, warning=FALSE}
+a<- TukeyHSD( aov(allGC1$DEM_ACT.MATH ~ allGC1$Semester)) 
+b<-as.data.frame(a$`allGC1$Semester`)
+knitr::kable(b, caption = "Anova. ACTMath among semesters")
+
+ggboxplot(allGC1, x = "Semester", y = "DEM_ACT.MATH",  title = "ACT Math in GC1",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1$DEM_ACT.MATH, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 40) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+```
+
+### Correlation models: ACT vs GenChem1
+
+```{r, echo=FALSE, message=FALSE}
+plot(allGC1$TG_Total.Grade....,allGC1$DEM_ACT.MATH,main="GenChem1")
+a<- lm(allGC1$DEM_ACT.MATH~allGC1$TG_Total.Grade.... )
+abline(a)
+r2a<-summary(a)$r.squared
+
+plot(allGC2$TG_Total.Grade....,allGC2$DEM_ACT.MATH,main="GenChem2")
+a<-lm(allGC2$DEM_ACT.MATH~allGC2$TG_Total.Grade.... )
+abline(a)
+r2b<-summary(a)$r.squared
+```
+
+We obtain a r-squared for both `r r2a` and `r r2b`, respectively. We need to find a better predictor. Let's see cumulative GPA before enrolling 
+
+## Previous GPA is a better predictor
+
+While ACT.Math historically seems to correlate well, since we're teaching sophomores, previous GPA is even a better predictor
+
+```{r, echo=FALSE,message=FALSE}
+mata<-describeBy(allGC1$DEM_Cumulative.GPA,allGC1$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1")
+mata<-describeBy(allGC2$DEM_Cumulative.GPA,allGC2$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem2")
+```
+
+### Was Incoming GPA different through the years?
+
+``` {r , echo=FALSE, message= FALSE, warning=FALSE}
+a<- TukeyHSD( aov(allGC1$DEM_Cumulative.GPA ~ allGC1$Semester)) 
+b<-as.data.frame(a$`allGC1$Semester`)
+knitr::kable(b, caption = "Anova. Entering GPA among semesters")
+
+ggboxplot(allGC1, x = "Semester", y = "DEM_Cumulative.GPA",  title = "Entering GPA in GC1",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1$DEM_Cumulative.GPA, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 5) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+```
+
+### Correlation models: Prev. GPA vs GenChem grades
+
+When we plot previous GPA (typically first year GPA) against final grade
+
+```{r, echo=FALSE, message=FALSE}
+#par(mfrow = c(1, 2))
+plot(allGC1$TG_Total.Grade....,allGC1$DEM_Cumulative.GPA,main="GenChem1")
+a<-lm(allGC1$DEM_Cumulative.GPA~allGC1$TG_Total.Grade.... )
+abline(a)
+r2a<-summary(a)$r.squared
+plot(allGC2$TG_Total.Grade....,allGC2$DEM_Cumulative.GPA,main="GenChem2")
+a<-lm(allGC2$DEM_Cumulative.GPA~allGC2$TG_Total.Grade.... )
+abline(a)
+r2b<-summary(a)$r.squared
+```
+
+In this case we obtain better r-squared for both `r r2a` and `r r2b`, respectively
+
+## Is Highschool performance relevant?
+
+For large schools, highschool(HS) ranking can be used as a better measurement than HS GPA. Also, HS-GPA is currently unavailable :). The units are given in percentile, so the higher the better
+
+```{r, echo=FALSE,message=FALSE}
+mata<-describeBy(allGC1$DEM_HS.Rank,allGC1$Semester,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1")
+```
+
+### Was Highschool performance different through the years?
+
+``` {r , echo=FALSE, message= FALSE, warning = FALSE}
+a<- TukeyHSD( aov(allGC1$DEM_HS.Rank ~ allGC1$Semester)) 
+b<-as.data.frame(a$`allGC1$Semester`)
+knitr::kable(b, caption = "Anova. HS ranking among semesters")
+
+ggboxplot(allGC1, x = "Semester", y = "DEM_HS.Rank",  title = "Highschool Rank in GC1",
+          color = "Semester", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(allGC1$DEM_HS.Rank, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+
+```
+
+Fall2012 seems to stand out again. 
+
+### Correlation models: HS rank vs GenChem grades
+
+```{r, echo=FALSE, message=FALSE}
+plot(allGC1$TG_Total.Grade....,allGC1$DEM_HS.Rank,main="GenChem1")
+a<-lm(allGC1$DEM_HS.Rank~allGC1$TG_Total.Grade.... )
+abline(a)
+r2a<-summary(a)$r.squared
+plot(allGC2$TG_Total.Grade....,allGC2$DEM_HS.Rank,main="GenChem2")
+a<-lm(allGC2$DEM_HS.Rank~allGC2$TG_Total.Grade.... )
+abline(a)
+r2b<-summary(a)$r.squared
+```
+
+Fairly poor r-squared for both `r r2a` and `r r2b`, respectively
+
+# Demographics
+
+Given the good correlation given above between previous GPA and final grade, let's then analyze how students of different demographics perform in chemistry when compared to their incoming GPA. In other words, instead of comparing how first-generation vs non-first-generation do, it is more interesting to see how considering their college readiness (as desribed by GPA) how they did in GenChem
+
+<!-- https://www.r-bloggers.com/add-p-values-and-significance-levels-to-ggplots/ -->
+<!-- http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html -->
+
+## Gender
+
+Look at how previous GPA and GenChem grades is among selfidentified genders. There was no data besides male and female.
+
+```{r,echo=FALSE,warning=FALSE}
+#there are some undefined that mess up the graphs
+onlyMF_gc1<- allGC1_[complete.cases(allGC1_$Sex),]
+onlyMF_gc2<- allGC2_[complete.cases(allGC2_$Sex),]
+mata<-describeBy(onlyMF_gc1$DEM_Cumulative.GPA,onlyMF_gc1$Sex,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "1st year GPA and Sex")
+mata<-describeBy(onlyMF_gc1$DEM_ACT.MATH,onlyMF_gc1$Sex,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "ACT math and Sex")
+mata<-describeBy(onlyMF_gc1$DEM_HS.Rank,onlyMF_gc1$Sex,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "HS rank and Sex")
+```
+
+From the above, we can see that females come to GenChem with very slightly higher GPA and remarkably better HS ranking, but with a lower ACT-math score. Also, males have a broader range of values and higher standard deviation, this tell us that male performance may not be treated as a single group, and it may require a further finer classification. In any case, How will these three factors affect their performance in GenChem?
+The number of students may not be exactly the same because not all students have ACT or HS data.
+
+```{r,echo=FALSE,message=FALSE}
+mata<-describeBy(onlyMF_gc1$TG_Total.Grade....,onlyMF_gc1$Sex,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1 grade and Sex")
+mata<-describeBy(onlyMF_gc2$TG_Total.Grade....,onlyMF_gc2$Sex,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem2 grade and Sex")
+```
+
+### Comparing the two genders each year
+
+While it may look like males do better than females, even though females came with better GPA and HS ranking, there is actually no significant difference when compared the two groups in general.
+
+```{r, echo=FALSE,message=FALSE}
+library(ggpubr)
+p <- ggboxplot(onlyMF_gc1, x = "Sex", y = "TG_Total.Grade....", color = "Sex", palette = "jco", add = "jitter")
+p + stat_compare_means() #default is wilcox for comparing non-parametric two groups
+```
+
+However, when the two groups are compared each semester we notice that Fall 2011 is the only semester with a significant difference between genders. 
+
+```{r, echo=FALSE,message=FALSE}
+p <- ggboxplot(onlyMF_gc1, x = "Semester.x", y = "TG_Total.Grade....", color = "Sex", palette = "jco", add = "jitter")
+p + stat_compare_means(aes(group=Sex),label="p.format") #default is wilcox for comparing non-parametric two groups
+```
+
+### Performance by each gender through the years
+
+Before we jump into conclusions, however, we may need to look into how the females in Fall 2011 performed compared to other semester's females.
+
+```{r, echo=FALSE,message=FALSE, warning = FALSE}
+#selecting females
+onlyF_gc1 <- onlyMF_gc1[onlyMF_gc1$Sex=="F",]
+onlyM_gc1 <- onlyMF_gc1[onlyMF_gc1$Sex=="M",]
+
+ggboxplot(onlyF_gc1, x = "Semester.x", y = "TG_Total.Grade....",  title = "Females in GC1",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyF_gc1$TG_Total.Grade....), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(onlyM_gc1, x = "Semester.x", y = "TG_Total.Grade....",  title = "Males in GC1",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyM_gc1$TG_Total.Grade....), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(onlyF_gc1, x = "Semester.x", y = "DEM_Cumulative.GPA",  title = "Incoming GPA for females",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyF_gc1$DEM_Cumulative.GPA, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 5) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(onlyM_gc1, x = "Semester.x", y = "DEM_Cumulative.GPA",  title = "Incoming GPA for males",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyM_gc1$DEM_Cumulative.GPA, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 5) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(onlyF_gc1, x = "Semester.x", y = "DEM_HS.Rank",  title = "HS Ranking for females",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyF_gc1$DEM_HS.Rank, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+ggboxplot(onlyM_gc1, x = "Semester.x", y = "DEM_HS.Rank",  title = "HS Ranking for males",
+          color = "Semester.x", add = "jitter", legend="none") + rotate_x_text(angle = 45) +  
+  geom_hline( yintercept = mean(onlyM_gc1$DEM_HS.Rank, na.rm = TRUE), linetype = 2) + 
+  stat_compare_means(method = "anova", label.y = 110) +
+  stat_compare_means(label = "p.format", method = "t.test", ref.group = ".all.")
+
+```
+
+We saw that females had performed significantly lower in Fall2011, and almost significantly higher 
+in Fall2013 than males. However, we see that these differences may also be explained by the 
+differences with the incoming GPAs, but not by HS ranking. Also, many students lack HS Ranking so the 
+statistics may be lacking.
+
+
+## Ethnicity
+
+Let's compare the GPA before enrolling in GenChem for students selfidentified ethnicity.
+
+```{r,echo=FALSE,message=FALSE, warning=FALSE}
+mata<-describeBy(allGC1$DEM_Cumulative.GPA,allGC1$DEM_Student.of.Color,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "1st year GPA and Student of Color: Y/N")
+
+mata<-describeBy(allGC1$TG_Total.Grade....,allGC1$DEM_Student.of.Color,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1 grade and Student of Color: Y/N")
+
+mata<-describeBy(allGC2$TG_Total.Grade....,allGC2$DEM_Student.of.Color,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem2 grade and Student of Color: Y/N")
+```
+
+
+``` {r , echo=FALSE, message= FALSE, warning = FALSE}
+require(gridExtra)
+plotA <-ggplot(allGC1, aes(x=TG_Total.Grade...., fill=DEM_Student.of.Color)) + geom_histogram() + ggtitle("GenChem1 by Ethnicity")
+plotB <-ggplot(allGC1, aes(x=DEM_Cumulative.GPA, fill=DEM_Student.of.Color)) + geom_histogram() + ggtitle("Prev GPA by Ethnicity")
+grid.arrange(plotA,plotB)
+```
+
+### Statistical analysis of performance in GenChem1 by ethnicity
+
+``` {r, echo=FALSE,message=FALSE, warning=FALSE}
+p <- ggboxplot(allGC1, x = "DEM_Student.of.Color", y = "TG_Total.Grade....", color = "DEM_Student.of.Color", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means() #default is wilcox for comparing non-parametric two groups
+
+p <- ggboxplot(allGC1, x = "Semester", y = "TG_Total.Grade....", color = "DEM_Student.of.Color", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means(aes(group=DEM_Student.of.Color),label="p.format") #default is wilcox for comparing non-parametric two groups
+
+
+```
+
+
+### Different ethnicities
+
+
+```{r,echo=FALSE,message=FALSE, warning=FALSE}
+mata<-describeBy(allGC1$DEM_Cumulative.GPA,allGC1$DEM_Ethnicity,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "1st year GPA for different ethnicities")
+```
+
+We can also run an anova among different ethnicities, but in any case it's hard to do statistics on such small numbers maybe only black and asian are large enough to be compared with whites.
+
+```{r, echo=FALSE,message=FALSE}
+TukeyHSD( aov(allGC1$TG_Total.Grade.... ~ allGC1$DEM_Ethnicity))
+```
+
+## First generation students
+
+Let's compare the GPA before enrolling in GenChem for 1st generation vs the rest. Notice for how many people we have information (a total of 421 students in Genchem1 and 309 in GenChem2)
+
+```{r,echo=FALSE,message=FALSE, warning=FALSE}
+mata<-describeBy(allGC1$DEM_Cumulative.GPA,allGC1$DEM_First.Generation,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "1st year GPA and 1st generation: Y/N")
+
+mata<-describeBy(allGC1$TG_Total.Grade....,allGC1$DEM_First.Generation,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem1 grade and 1st generation: Y/N")
+
+mata<-describeBy(allGC2$TG_Total.Grade....,allGC2$DEM_First.Generation,mat=TRUE,digits = 2)
+knitr::kable(mata[,c(2,4,5,6,7,8,9,10,11,12)] ,  caption = "GenChem2 grade and 1st generation: Y/N")
+```
+
+
+```{r , echo=FALSE, message= FALSE}
+ggplot(allGC1, aes(x=TG_Total.Grade...., fill=DEM_First.Generation )) + geom_histogram() + ggtitle("GenChem1 by First Generation")
+ggplot(allGC2, aes(x=TG_Total.Grade...., fill=DEM_First.Generation))+geom_histogram()+ggtitle("GenChem2 by First Generation")
+```
+
+### Statistical analysis of performance 1st generation in GenChem1
+
+``` {r, echo=FALSE,message=FALSE, warning=FALSE}
+p <- ggboxplot(allGC1, x = "DEM_First.Generation", y = "TG_Total.Grade....", color = "DEM_First.Generation", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means() #default is wilcox for comparing non-parametric two groups
+
+p <- ggboxplot(allGC1, x = "Semester", y = "TG_Total.Grade....", color = "DEM_First.Generation", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means(aes(group=DEM_First.Generation),label="p.format") #default is wilcox for comparing non-parametric two groups
+
+p <- ggboxplot(allGC2, x = "Semester", y = "TG_Total.Grade....", color = "DEM_First.Generation", palette = "jco", add = "jitter")  + rotate_x_text(angle = 45)
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means(aes(group=DEM_First.Generation),label="p.format") #default is wilcox for comparing non-parametric two groups
+```
+
+First generation students seem to do slightly better or the same than the rest. Are they coming in with equal preparation?
+We can look at HS rank to try to answer that.
+
+``` {r, echo=FALSE,message=FALSE, warning=FALSE}
+p <- ggboxplot(allGC1, x = "DEM_First.Generation", y = "DEM_HS.Rank", color = "DEM_First.Generation", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means() #default is wilcox for comparing non-parametric two groups
+p <- ggboxplot(allGC1, x = "Semester", y = "DEM_HS.Rank", color = "DEM_First.Generation", palette = "jco", add = "jitter")
+#p + stat_compare_means(method = "t.test")
+p + stat_compare_means(aes(group=DEM_HS.Rank),label="p.format") #default is wilcox for comparing non-parametric two groups
+```
+
+It seems that the first generation students are already better prepared than the non-first generation.

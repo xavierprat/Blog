@@ -7,7 +7,7 @@ author:
   - name: Xavier Prat-Resina 
     url: https://pratresina.umn.edu
     affiliation: University of Minnesota Rochester
-    affiliation_url: https://www.r.umn.edu
+    affiliation_url: https://r.umn.edu
     orcid_id: 0000-0002-1380-6025
 categories:
   - Curriculum
@@ -31,9 +31,9 @@ knitr::opts_chunk$set(echo = FALSE)
 So you want to change your curriculum, you may even want to be innovative and change everything, assessment, course sequence, type of delivery, calendar, degree requirements. Everything.
 
 Well, before you start dreaming, brainstorming with post-its, and drawing on a whiteboard with multiple colors,
-there are four gates, four checkpoints, four horsemen that will send your little innovative ideas to the apocalypse.
+there are four gates, four checkpoints, four horsemen that will send your little innovative ideas to the apocalypse unless you keep them in mind. You may decide to fight each of them or you may just let them limit
+your possibilities, but you cannot ignore them.
 
-You cannot ignore them, if you do not abide by them you must at least have an answer about how to defeat it.
 They work as control checkpoints or valves. They slow down the process, sometimes for a good reason,
 because any significant change in the curriculum has a lasting impact to the institution and to the future of our students.
 
@@ -41,16 +41,16 @@ So here they are, Death, Famine, War, and Conquest
 
 ### Horseman 1. Death: Admission requirements for graduate and professional schools.
 
-Will our courses be accepted elsewhere? Will they transfer in and transfer out? The moment your courses do not have the name or the exact content or the prescribed number of credits, they may not be accepted elsewhere.
+Will your courses be accepted elsewhere? Will they transfer-in and transfer-out? The moment your courses do not have the name or the exact content or the prescribed number of credits, they may not be accepted elsewhere.
 It is not uncommon to not be transfer friendly among undergraduate degrees, 
-specially for courses in the major. But there is another way to be transfer unfriendly, and that is if
+specially for courses in the major. But it is a completely different set of problems if
 professional and graduate schools do not recognize our courses.
 This is specially problematic when many of our students pursue a post-graduate career. Not paying
 attention to this problem may undermine students career forever.
 
 **Advice**
 
-- Make a decision early and be aware of it. Unless your institution has a brand 
+- Make a decision early and be aware of it. Unless your institution has a prestigious and recognized brand 
 (Stanford courses will be accepted everywhere) there will be schools who will not recognize your courses.
 - Usually not being transfer friendly lowers the number of applying students.
 Bring the "Admissions department" to the conversation, they may not be too happy. 
@@ -85,7 +85,7 @@ Be always careful with members who will keep vocalizing opposition, if not by vo
 - It doesn't matter how right you think you are, unless you are going to create a parallel department, do not think you can carry on without a significant buy-in of the faculty.
 
 
-### Horseman 4. Conquest: Leaving students behind.
+### Horseman 4. Conquest: Know your students. How many are you willing to leave behind?
 
 Often, curriculum innovations are motivated by pedagogy. You want your students to learn better, learn
 more, transfer, apply, do research, hands-on experience. In other words, you want your students to practice

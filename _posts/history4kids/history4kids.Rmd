@@ -1,0 +1,37 @@
+---
+title: "World History for kids in times of plague"
+description: |
+  A drag and drop silly interface to teach kids fundamental events in human civilization
+preview: histokids.png
+author:
+  - name: Xavier Prat-Resina 
+    url: https://pratresina.umn.edu
+    affiliation: University of Minnesota Rochester
+    affiliation_url: https://r.umn.edu
+    orcid_id: 0000-0002-1380-6025
+categories:
+  - Javascript
+  - Kids
+date: 05-22-2020
+output:
+  distill::distill_article:
+    toc: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+```
+
+During the first weeks of the pandemic I decided to teach some basic historical events in human (western) civilization.
+
+I know nothing about how to teach History, but it seems to me that while the analysis of historical events will always be
+more important than remembering facts, there has to be a minimum of memorization. Every functioning citizen should be able
+to place the important events in a timeline.
+
+So I wrote a silly drag and drop interactive page using the [jQuery](https://jquery.com) library to give my kids a sense of accomplishment while they memorize this stuff.
+
+<a target="_blank" rel="noopener noreferrer" href="./histokids/index.html">Here's the link to the silly html page with Javascript</a>
+
+<iframe src="./histokids/index.html" title=histokids""></iframe>

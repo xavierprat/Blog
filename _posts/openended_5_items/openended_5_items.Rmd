@@ -6,7 +6,7 @@ author:
   - name: Xavier Prat-Resina 
     url: https://pratresina.umn.edu
     affiliation: University of Minnesota Rochester
-    affiliation_url: https://www.r.umn.edu
+    affiliation_url: https://r.umn.edu
     orcid_id: 0000-0002-1380-6025
 categories:
   - R

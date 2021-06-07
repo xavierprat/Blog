@@ -18,7 +18,7 @@ navbar:
 collections:
   posts:
     categories: true
-    categories_metadata: false
+    categories_metadata: true
     authors_metadata: false
     share: [twitter, linkedin]
     citations: true

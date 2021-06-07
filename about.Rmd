@@ -5,7 +5,7 @@ author:
   - name: Xavier Prat-Resina 
     url: https://pratresina.umn.edu
     affiliation: University of Minnesota Rochester
-    affiliation_url: https://www.r.umn.edu
+    affiliation_url: https://r.umn.edu
     orcid_id: 0000-0002-1380-6025
 ---
 
@@ -19,3 +19,6 @@ This is just a collection of musings, half-cooked analysis with python/R scripts
 The place where all the projects come to die. Too often I start a research question, a project or a data analysis that has the potential to become a paper. 
 And then a new fire needs to be put out and the results remain among my notes, to never see the light again.
 Well, this is an unfiltered version of those notes. Keep in mind, they're dead.
+
+This site is built using the [Distill](https://rstudio.github.io/distill/) library available on RStudio where I type Markdown plain text, *knit* it, and submit it to github. 
+I'm pretty old school and I still prefer plain-text files where I can use the *vim* commands to edit them and SHELL commands on the terminal.
