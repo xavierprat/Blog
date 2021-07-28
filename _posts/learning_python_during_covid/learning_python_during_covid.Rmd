@@ -1,0 +1,77 @@
+---
+title: "Learning Python during COVID-19"
+description: |
+  Using simple examples of covid data manipulation and data representation for my independent study learning Python.
+draft: true
+preview: 
+author:
+  - name: Xavier Prat-Resina 
+    url: https://pratresina.umn.edu
+    affiliation: University of Minnesota Rochester
+    affiliation_url: https://r.umn.edu
+    orcid_id: 0000-0002-1380-6025
+categories:
+  - Python
+date: 05-01-2020
+output:
+  distill::distill_article:
+    toc: false
+    code_folding: true
+---
+
+# Comparing current COVID pandemic with other causes of disease and death 
+
+## Focusing on deaths and the same country
+
+In order to get a better picture of the magnitude of the pandemics, 
+counting number of deaths by covid instead of number of cases may better. 
+It has been reported that many COVID cases go undetected either because they are asymptomatic or the country has no resources or strategy to diagnose them. While this is also true when applied to number of deaths, one can expect a higher number of tests on the individuals who pass away.
+
+Also, different countries have different strategies or resources for testing for COVID so our comparison will only make sense if we compare within the same country.
+
+## Sources
+
+* Influenza and pneumonia in the US: https://healthdata.gov/dataset/deaths-pneumonia-and-influenza-pi-and-all-deaths-state-and-region-national-center-health-0
+* COVID updated by the NYtimes https://github.com/nytimes/covid-19-data
+
+```{r setup, include=FALSE}
+library(reticulate)
+#for some reason I had to install pandas again, even if its already in the conda distr
+#py_install("pandas")
+#knitr::opts_chunk$set(python.reticulate=FALSE)
+use_python("/Users/xavier/opt/anaconda3/bin/python")
+
+```
+
+
+```{python}
+import pandas as pd
+import numpy as np
+# pandas cheat sheet https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
+flu = pd.read_csv("/Users/xavier/IndepStudy20/CodingSpring20_students/COVID19/flu_deaths_cdc.csv")
+covid = pd.read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv")
+
+states = covid['state'].unique()
+```
+
+## How many people die on a regular basis? Using New York state as example.
+
+In order to make sense of the current news it may be useful to first get a sense of how current deaths compare with previous, non-pandemic, years.
+
+```{python}
+flu19ny = flu.loc[ (flu["season"] == "2018-19") & (flu['geoid'] == "State") & (flu["State"] == "New York")]
+flu19ny = flu19ny.sort_values(by="MMWR Year/Week")
+fluXweek = np.mean(flu19ny["Deaths from pneumonia and influenza"])
+deatXweek = np.mean(flu19ny["All Deaths"])
+print(fluXweek,deatXweek)
+```
+
+On average, in New York state, every week {{fluXweek}} people die of flu/pneumonia out of a total average of {{deatXweek}} all deaths per week.
+
+```{python}
+#flu19 = flu.loc[ (flu["season"] == "2018-19") & (flu['geoid'] == "State") ]
+
+flu19ny.plot.barh(x="MMWR Year/Week",y=["Deaths from pneumonia and influenza","All Deaths"],figsize=(15,15))
+#flu19ny.plot.bar(x="MMWR Year/Week",y="All Deaths")
+```

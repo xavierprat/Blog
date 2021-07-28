@@ -1,0 +1,59 @@
+---
+title: "Calculate the Potential of Mean Force from MD of an enzymatic reaction"
+description: |
+  Parsing files, plotting numbers, calculating statistics
+author:
+  - name: Xavier Prat-Resina 
+    url: https://pratresina.umn.edu
+    affiliation: University of Minnesota Rochester
+    affiliation_url: https://r.umn.edu
+    orcid_id: 0000-0002-1380-6025
+categories:
+  - Modeling
+  - R
+date: 08-10-2018
+output:
+  distill::distill_article:
+    number_sections: true
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    fig_caption: true
+    code_folding: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Abstract
+
+
+
+Let's first load a couple of files from the different umbrella sampling windows
+
+``` {r , echo=FALSE, message= FALSE}
+setwd("/Users/xavier/Gd/Research/Chile/10ns")
+#myfiles contains the array of files
+myfiles = list.files(path = "./", pattern="eqq+.*rc")
+#reading the windows for R = -0.1 and -0.2
+n01 = read.table(myfiles[1])
+n02 = read.table(myfiles[2]) 
+
+```
+
+Plot their value through time
+
+``` {r , echo=FALSE, message= FALSE}
+plot(n01$V2,type="l")
+lines(n02$V2,col=c("red"))
+```
+
+Plot the histograms 
+
+``` {r , echo=FALSE, message= FALSE}
+# 100 bins gives a good continuum
+d_n01 = density(n01$V2,n=100)
+d_n02 = density(n02$V2,n=100)
+plot(d_n01$x,d_n01$y,type="l")
+lines(d_n02$x,d_n02$y,col=c("red"))
+```

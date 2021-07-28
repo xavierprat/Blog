@@ -7,7 +7,18 @@
     <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The Simplest Potential of Mean Force using Molecular Dynamics </title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/calculating_pmf</link>
+      <description>Using the rotation of ethane to understand some tools from statistical mechanics.</description>
+      <category>Modeling</category>
+      <category>R</category>
+      <guid>https://xavierprat.github.io/Blog/posts/calculating_pmf</guid>
+      <pubDate>Thu, 15 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/calculating_pmf/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>The four horsemen of curriculum innovation apocalypse</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
@@ -28,6 +39,15 @@
       <guid>https://xavierprat.github.io/Blog/posts/history4kids</guid>
       <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
       <media:content url="https://xavierprat.github.io/Blog/posts/history4kids/histokids.png" medium="image" type="image/png" width="2290" height="1582"/>
+    </item>
+    <item>
+      <title>Learning Python during COVID0-19</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/learning_python_during_covid</link>
+      <description>Using simple examples of covid data manipulation and data representation for my independent study learning Python.</description>
+      <category>Python</category>
+      <guid>https://xavierprat.github.io/Blog/posts/learning_python_during_covid</guid>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Open ended questions: Name 5 relevant items</title>
@@ -60,6 +80,17 @@
       <guid>https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem</guid>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       <media:content url="https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
+      <title>Calculate the Potential of Mean Force from MD of an enzymatic reaction</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</link>
+      <description>Parsing files, plotting numbers, calculating statistics</description>
+      <category>Modeling</category>
+      <category>R</category>
+      <guid>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</guid>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
   </channel>
 </rss>

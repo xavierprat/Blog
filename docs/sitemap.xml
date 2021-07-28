@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://xavierprat.github.io/Blog/about.html</loc>
-    <lastmod>2021-06-04T14:05:44-05:00</lastmod>
+    <lastmod>2021-06-04T21:05:50+02:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/</loc>
-    <lastmod>2021-06-03T08:38:45-05:00</lastmod>
+    <lastmod>2021-06-03T15:38:51+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://xavierprat.github.io/Blog/posts/calculating_pmf/</loc>
+    <lastmod>2021-07-28T17:32:45+02:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/the_four_horsemen/</loc>
@@ -14,7 +18,11 @@
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/history4kids/</loc>
-    <lastmod>2021-06-07T07:38:32-05:00</lastmod>
+    <lastmod>2021-06-08T07:22:14-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://xavierprat.github.io/Blog/posts/learning_python_during_covid/</loc>
+    <lastmod>2021-07-15T09:30:02-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/openended_5_items/</loc>
@@ -27,5 +35,9 @@
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem/</loc>
     <lastmod>2021-06-07T06:07:37-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella/</loc>
+    <lastmod>2021-07-15T12:01:14-05:00</lastmod>
   </url>
 </urlset>

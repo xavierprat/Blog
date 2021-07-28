@@ -34,4 +34,4 @@ So I wrote a silly drag and drop interactive page using the [jQuery](https://jqu
 
 <a target="_blank" rel="noopener noreferrer" href="./histokids/index.html">Here's the link to the silly html page with Javascript</a>
 
-<iframe src="./histokids/index.html" title=histokids""></iframe>
+<iframe src="https://xavierprat.github.io/Blog/posts/history4kids/histokids/index.html" title=histokids""></iframe>
