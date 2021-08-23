@@ -7,7 +7,18 @@
     <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Calculate the Potential of Mean Force from MD of an enzymatic reaction</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</link>
+      <description>Parsing files, plotting coordinates, calculating free energy</description>
+      <category>Modeling</category>
+      <category>R</category>
+      <guid>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</guid>
+      <pubDate>Tue, 17 Aug 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>The Simplest Potential of Mean Force using Molecular Dynamics </title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
@@ -80,17 +91,6 @@
       <guid>https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem</guid>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       <media:content url="https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
-    <item>
-      <title>Calculate the Potential of Mean Force from MD of an enzymatic reaction</title>
-      <dc:creator>Xavier Prat-Resina</dc:creator>
-      <link>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</link>
-      <description>Parsing files, plotting numbers, calculating statistics</description>
-      <category>Modeling</category>
-      <category>R</category>
-      <guid>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella</guid>
-      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
-      <media:content url="https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
   </channel>
 </rss>

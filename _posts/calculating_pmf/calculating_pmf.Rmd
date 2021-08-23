@@ -409,7 +409,7 @@ At this point we will avoid using statistical tools to assess how converged or h
 For a longer discussion and a more systematic approach on assessing the convergence of simulations, check
 the paper by Grossfield and Zuckerman entitled [Quantifying uncertainty and sampling quality in biomolecular simulations](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2865156/)
 
-| Simulation <br> Simulation / Freq / sample | -180&deg;&rarr; -120&deg;  | -60&deg;&rarr;0&deg;  | +60&deg;&rarr;+120&deg; |
+| Simulation / Freq / sample | -180&deg;&rarr; -120&deg;  | -60&deg;&rarr;0&deg;  | +60&deg;&rarr;+120&deg; |
 |------------|-----------:|-------:|---------:|
 |600K 1ns/5 steps/0 - 1ns | `r barr_all_f5_1ns_1` | `r barr_all_f5_1ns_2`| `r barr_all_f5_1ns_3`|
 |300K 5ns/5 steps/50ps- 5ns  | `r barr_1s_f5_5ns_1` | `r barr_1s_f5_5ns_2`| `r barr_1s_f5_5ns_3`|
@@ -423,4 +423,4 @@ Notice that for a simple system such as ethane and for a relatively long simulat
 can observe differences of the order of 0.5 kcal/mol. In the paper cited above by Grossfield and Zuckerman,
 the authors list in section 4 a series of recommendations. The take home message is that there is still
 a fair amount of heuristic analysis to settle on the calculation of thermodynamic properties using
-molecular simulation.
+molecular simulations.
