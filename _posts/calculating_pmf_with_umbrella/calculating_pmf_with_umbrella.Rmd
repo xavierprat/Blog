@@ -140,7 +140,7 @@ a3a4 = a3-a4
 fe_a3a4 = read.csv("/Users/xavier/Gd/Research/Chile/Camilo/10ns/free_energy",header = FALSE, sep = "\t")
 ```
 
-# Analysis of reaction coordinate: nucleophilic elimination O - C - O
+# Analysis of reaction coordinate: nucleophilic addition/elimination O - C - O
 
 ## Dynamic analysis
 
