@@ -3,6 +3,7 @@ title: "Prat-Resina's blog"
 description: |
   A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 base_url: https://xavierprat.github.io/Blog
+google_analytics: "UA-205673345-1"
 output_dir: "docs"
 navbar:
   logo: 
