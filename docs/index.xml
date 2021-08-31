@@ -61,6 +61,17 @@
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Giving students feedback with simple learning analytics</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/giving_students_feedback_with_simple_learning_analytics</link>
+      <description>Using learning data to inform students of their course performance</description>
+      <category>Curriculum</category>
+      <category>R</category>
+      <guid>https://xavierprat.github.io/Blog/posts/giving_students_feedback_with_simple_learning_analytics</guid>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/giving_students_feedback_with_simple_learning_analytics/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
       <title>Open ended questions: Name 5 relevant items</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
       <link>https://xavierprat.github.io/Blog/posts/openended_5_items</link>
