@@ -1,5 +1,25 @@
 [
   {
+    "path": "posts/Querying_GoogleScholar_with_Python/",
+    "title": "Querying Google Scholar with Python",
+    "description": "And build an always current list of publications in your department",
+    "author": [
+      {
+        "name": "Xavier Prat-Resina",
+        "url": "https://pratresina.umn.edu"
+      }
+    ],
+    "date": "2024-07-01",
+    "categories": [
+      "Python",
+      "Javascript"
+    ],
+    "contents": "\nBesides the faculty research sites, should a department be listing their faculty’s productivity on their site?\nA department may want to highlight their identity to future employees or visitors. For example,\nan academic unit with specific research agenda will benefit from showing in one place what their\nfaculty are currently working on.\nSome departments have enough budget that they can dedicate resources (and people) to manually selecting the publications of their faculty. If you leave it up to faculty to reach out to this administrative person you will probably end up with some gaps (as some members may not communicate their publications as often as others). On the other hand, if you leave it up to the department to select what publications\nmust be highlighted, unless this person is an expert on the field there may be some gaps as well.\nSo I found a compromise between the two options. One can build a Google Scholar’s profile (https://scholar.google.com/intl/en/scholar/citations.html). GoogleScholar will automatically add\nnew publications and the faculty member can decide what to include and what to remove. The good\nnews is that even if the faculty member doesn’t do anything, as long as they create the profile once,\nthe list of publications will keep updating.\nThis can work because there is a python library called scholarly (https://pypi.org/project/scholarly/) that can query Google Scholar.\nI created a python script that queries all the GoogleScholar profiles of our faculty. This script creates a JSON file for each author and I wrote a HTML/JS “very bare bones” interface that allows the user\nto navigate the large list of publications and filter them by year, person, topic…etc\nAll the code is on github (https://github.com/xavierprat/scholarly-at-UMR?tab=readme-ov-file) and a live example of the interface is available on my site http://chemdata.r.umn.edu/scholar/ . Check the Github repository for instructions about customization and installation.\nThe python script needs be run everytime you want the list to be updated so you may want to setup a crontab on your server to periodically query GoogleScholar.\nIf you try it and have questions, just let me know!\n\n\n\n",
+    "preview": {},
+    "last_modified": "2024-07-02T15:36:10-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/calculating_pmf_with_umbrella/",
     "title": "Calculate the Potential of Mean Force from MD of an enzymatic reaction",
     "description": "Parsing files, plotting coordinates, calculating free energy",
@@ -129,26 +149,6 @@
     "preview_height": 768
   },
   {
-    "path": "posts/Querying_GoogleScholar_with_Python/",
-    "title": "Querying Google Scholar with Python",
-    "description": "And build an always current list of publications in your department",
-    "author": [
-      {
-        "name": "Xavier Prat-Resina",
-        "url": "https://pratresina.umn.edu"
-      }
-    ],
-    "date": "2019-08-01",
-    "categories": [
-      "Python",
-      "Javascript"
-    ],
-    "contents": "\n\n\n\n",
-    "preview": {},
-    "last_modified": "2023-08-08T21:15:41-05:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/triangles_of_curriculum_design/",
     "title": "Chemistry curriculum: triangles everywhere",
     "description": "Many aspects of Chemistry learning, from delivery to learning objectives come in triads of linked concepts",
@@ -184,9 +184,9 @@
       "Curriculum",
       "Javascript"
     ],
-    "contents": "\nIn my chemistry class there’s always a day that I need to engage students in a different way. Perhaps is the day\nbefore the exam and don’t want to introduce any new or serious content, perhaps is that weird day right before\nThanksgiving when you are not canceling class but half of students are not attending.\nIn any case, through the years I have been using different forms of games that can carry a tangential pedagogical value\nand that can engage students in a time when their focus is probably at their best.\nFor example, for a first semester chemistry (CHEM1331 - so a little different) we run a bingo game.\nThe game takes place after students have learned their functional\ngroups, skeletal structure, NMR peaks and IR signals.\nTo generate the bingo cards you need\na list of compound names or properties: https://chem.r.umn.edu/chem1331/bingo/list_compounds\na python script that generates the cards by building a table with randomized names: http://chem.r.umn.edu/chem1331/bingo/parse.py\n\nA site that randomly chooses compounds. A developed different ones with different types of animations\nBingo 1 site: Uses jQuery to spin through a wheel of compounds http://chem.r.umn.edu/chem1331/bingo/\nBingo 2 site: The next one does not spin, it just fills out a table so that no compound is ever repeated (which was a problem with the first site) http://chem.r.umn.edu/chem1331/bingo/bingo.html\n\nAs you can see, the site requires having generated the 2d structures. Nowadays you may be better off using RDKit to convert names to 2d images (https://www.rdkit.org/docs/GettingStartedInPython.html). I think I generated that group of images by querying the NIC server. For example, the URL https://cactus.nci.nih.gov/chemical/structure/methylamine/image returns an image of methylamine. So, with the terminal you can build a script that downloads all those files such as:\ncat list|while read mol\ndo\n    curl -o $mol.gif https://cactus.nci.nih.gov/chemical/structure/$mol/image\ndone\n\n\n\n\n\n\n",
+    "contents": "\nIn my chemistry class there’s always a day that I need to engage students in a different way. Perhaps is the day\nbefore the exam and don’t want to introduce any new or serious content, perhaps is that weird day right before\nThanksgiving when you are not canceling class but half of students are not attending.\nIn any case, through the years I have been using different forms of games that can carry a tangential pedagogical value\nand that can engage students in a time when their focus is probably at their best.\nFor example, for a first semester chemistry (CHEM1331 - so a little different) we run a bingo game.\nThe game takes place after students have learned their functional\ngroups, skeletal structure, NMR peaks and IR signals.\nTo generate the bingo cards you need\na list of compound names or properties: http://chem.r.umn.edu/chem1331/bingo/list_compounds\na python script that generates the cards by building a table with randomized names: http://chem.r.umn.edu/chem1331/bingo/parse.py\n\nA site that randomly chooses compounds. A developed different ones with different types of animations\nBingo 1 site: Uses jQuery to spin through a wheel of compounds http://chem.r.umn.edu/chem1331/bingo/\nBingo 2 site: The next one does not spin, it just fills out a table so that no compound is ever repeated (which was a problem with the first site) http://chem.r.umn.edu/chem1331/bingo/bingo.html\n\nAs you can see, the site requires having generated the 2d structures. Nowadays you may be better off using RDKit to convert names to 2d images (https://www.rdkit.org/docs/GettingStartedInPython.html). I think I generated that group of images by querying the NIC server. For example, the URL https://cactus.nci.nih.gov/chemical/structure/methylamine/image returns an image of methylamine. So, with the terminal you can build a script that downloads all those files such as:\ncat list|while read mol\ndo\n    curl -o $mol.gif https://cactus.nci.nih.gov/chemical/structure/$mol/image\ndone\nThat’s all. The class will take a solid 30 minutes to even have completed a line (let alone a full bingo card).\n\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2024-07-02T14:27:51-05:00",
+    "last_modified": "2024-07-02T14:50:14-05:00",
     "input_file": {}
   },
   {

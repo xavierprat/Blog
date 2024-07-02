@@ -7,7 +7,17 @@
     <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 17 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Querying Google Scholar with Python</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python</link>
+      <description>And build an always current list of publications in your department</description>
+      <category>Python</category>
+      <category>Javascript</category>
+      <guid>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python</guid>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Calculate the Potential of Mean Force from MD of an enzymatic reaction</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
@@ -72,16 +82,6 @@
       <guid>https://xavierprat.github.io/Blog/posts/openended_5_items</guid>
       <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
       <media:content url="https://xavierprat.github.io/Blog/posts/openended_5_items/openended_5_items_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
-    </item>
-    <item>
-      <title>Querying Google Scholar with Python</title>
-      <dc:creator>Xavier Prat-Resina</dc:creator>
-      <link>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python</link>
-      <description>And build an always current list of publications in your department</description>
-      <category>Python</category>
-      <category>Javascript</category>
-      <guid>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python</guid>
-      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Chemistry curriculum: triangles everywhere</title>

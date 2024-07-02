@@ -36,7 +36,7 @@ groups, skeletal structure, NMR peaks and IR signals.
 
 * To generate the bingo cards you need
 
-  - a list of compound names or properties: https://chem.r.umn.edu/chem1331/bingo/list_compounds 
+  - a list of compound names or properties: http://chem.r.umn.edu/chem1331/bingo/list_compounds 
   - a python script that generates the cards by building a table with randomized names: http://chem.r.umn.edu/chem1331/bingo/parse.py 
 
 * A site that randomly chooses compounds. A developed different ones with different types of animations
@@ -51,6 +51,8 @@ do
 	curl -o $mol.gif https://cactus.nci.nih.gov/chemical/structure/$mol/image
 done
 ```
+
+That's all. The class will take a solid 30 minutes to even have completed a line (let alone a full bingo card).
 
 ```{r, message= FALSE, warning=FALSE}
 ```
