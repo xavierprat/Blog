@@ -35,12 +35,10 @@ Also, different countries have different strategies or resources for testing for
 * COVID updated by the NYtimes https://github.com/nytimes/covid-19-data
 
 ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
-#for some reason I had to install pandas again, even if its already in the conda distr
-#py_install("pandas")
-#knitr::opts_chunk$set(python.reticulate=FALSE)
-use_python("/Users/xavier/opt/anaconda3/bin/python")
-
+#setup your own environment BUT IT HAS TO BE THE SAME AS IN THE PREFERENCES ENVIRONMENT
+use_python("~/miniconda3/envs/p4env/bin/python3.10")
 ```
 
 
@@ -49,7 +47,7 @@ import pandas as pd
 import numpy as np
 # pandas cheat sheet https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
 
-flu = pd.read_csv("/Users/xavier/IndepStudy20/CodingSpring20_students/COVID19/flu_deaths_cdc.csv")
+flu = pd.read_csv("http://chem.r.umn.edu/files/flu_deaths_cdc.csv")
 covid = pd.read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv")
 
 states = covid['state'].unique()

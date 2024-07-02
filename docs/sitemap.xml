@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://xavierprat.github.io/Blog/about.html</loc>
-    <lastmod>2021-06-04T14:05:50-05:00</lastmod>
+    <lastmod>2022-08-15T14:55:40-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/</loc>
-    <lastmod>2021-06-03T08:38:51-05:00</lastmod>
+    <lastmod>2022-08-15T14:55:40-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/calculating_pmf_with_umbrella/</loc>
-    <lastmod>2021-08-24T16:22:48-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:10-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/calculating_pmf/</loc>
-    <lastmod>2021-07-28T10:45:14-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:10-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/the_four_horsemen/</loc>
-    <lastmod>2021-06-05T16:34:37-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:24-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/history4kids/</loc>
-    <lastmod>2021-06-08T07:22:32-05:00</lastmod>
-  </url>
-  <url>
-    <loc>https://xavierprat.github.io/Blog/posts/learning_python_during_covid/</loc>
-    <lastmod>2021-07-15T09:30:02-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:24-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/giving_students_feedback_with_simple_learning_analytics/</loc>
-    <lastmod>2021-08-25T09:43:36-05:00</lastmod>
+    <lastmod>2022-08-15T14:58:16-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/openended_5_items/</loc>
-    <lastmod>2021-06-03T12:33:47-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:24-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python/</loc>
+    <lastmod>2023-08-08T21:15:41-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/triangles_of_curriculum_design/</loc>
-    <lastmod>2021-06-05T12:57:29-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:16-05:00</lastmod>
   </url>
   <url>
     <loc>https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem/</loc>
-    <lastmod>2021-06-07T06:08:17-05:00</lastmod>
+    <lastmod>2022-08-15T14:56:24-05:00</lastmod>
   </url>
 </urlset>
