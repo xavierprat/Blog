@@ -37,10 +37,17 @@ new publications and the faculty member can decide what to include and what to r
 news is that even if the faculty member doesn't do anything, as long as they create the profile once,
 the list of publications will keep updating.
 
-This can work because there is a python library called scholarly (https://pypi.org/project/scholarly/) that can query Google Scholar.
+This approach can work because there is a python library called scholarly (https://pypi.org/project/scholarly/) that can query Google Scholar.
 
-I created a python script that queries all the GoogleScholar profiles of our faculty. This script creates a JSON file for each author and I wrote a HTML/JS "very bare bones" interface that allows the user
+I created a python script that queries all the GoogleScholar profiles of our faculty. The python script creates a JSON file for each author and I wrote a HTML/JS "very bare bones" interface that allows the user
 to navigate the large list of publications and filter them by year, person, topic...etc
+
+But hey, there is even an interactive chartJS graph that can count how many publications related to "learning research" there are per year.
+
+<figure class="image">
+  <img src="chart.png">
+  <figcaption>Interactive chart on the website http://chemdata.r.umn.edu/scholar/ </figcaption>
+</figure>
 
 All the code is on github (https://github.com/xavierprat/scholarly-at-UMR?tab=readme-ov-file) and a live example of the interface is available on my site http://chemdata.r.umn.edu/scholar/ . Check the Github repository for instructions about customization and installation.
 
