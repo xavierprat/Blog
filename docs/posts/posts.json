@@ -170,6 +170,26 @@
     "preview_height": 754
   },
   {
+    "path": "posts/web_lotteries_bingos_for_student_games/",
+    "title": "Web lotteries and Bingos for Student Engaging Games",
+    "description": "Simple web interfaces in Javascript for light-weight games in the chemistry class",
+    "author": [
+      {
+        "name": "Xavier Prat-Resina",
+        "url": "https://pratresina.umn.edu"
+      }
+    ],
+    "date": "2019-08-01",
+    "categories": [
+      "Curriculum",
+      "Javascript"
+    ],
+    "contents": "\nIn my chemistry class there’s always a day that I need to engage students in a different way. Perhaps is the day\nbefore the exam and don’t want to introduce any new or serious content, perhaps is that weird day right before\nThanksgiving when you are not canceling class but half of students are not attending.\nIn any case, through the years I have been using different forms of games that can carry a tangential pedagogical value\nand that can engage students in a time when their focus is probably at their best.\nFor example, for a first semester chemistry (CHEM1331 - so a little different) we run a bingo game.\nThe game takes place after students have learned their functional\ngroups, skeletal structure, NMR peaks and IR signals.\nTo generate the bingo cards you need\na list of compound names or properties: https://chem.r.umn.edu/chem1331/bingo/list_compounds\na python script that generates the cards by building a table with randomized names: http://chem.r.umn.edu/chem1331/bingo/parse.py\n\nA site that randomly chooses compounds. A developed different ones with different types of animations\nBingo 1 site: Uses jQuery to spin through a wheel of compounds http://chem.r.umn.edu/chem1331/bingo/\nBingo 2 site: The next one does not spin, it just fills out a table so that no compound is ever repeated (which was a problem with the first site) http://chem.r.umn.edu/chem1331/bingo/bingo.html\n\nAs you can see, the site requires having generated the 2d structures. Nowadays you may be better off using RDKit to convert names to 2d images (https://www.rdkit.org/docs/GettingStartedInPython.html). I think I generated that group of images by querying the NIC server. For example, the URL https://cactus.nci.nih.gov/chemical/structure/methylamine/image returns an image of methylamine. So, with the terminal you can build a script that downloads all those files such as:\ncat list|while read mol\ndo\n    curl -o $mol.gif https://cactus.nci.nih.gov/chemical/structure/$mol/image\ndone\n\n\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2024-07-02T14:27:51-05:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/analysis_seven_years_genchem/",
     "title": "Analysis of seven years of General Chemistry student data",
     "description": "Trying to make sense of student performance and identifying possible predictors of academic success.",

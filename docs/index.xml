@@ -94,6 +94,16 @@
       <media:content url="https://xavierprat.github.io/Blog/posts/triangles_of_curriculum_design/triangle1.png" medium="image" type="image/png" width="1077" height="754"/>
     </item>
     <item>
+      <title>Web lotteries and Bingos for Student Engaging Games</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/web_lotteries_bingos_for_student_games</link>
+      <description>Simple web interfaces in Javascript for light-weight games in the chemistry class</description>
+      <category>Curriculum</category>
+      <category>Javascript</category>
+      <guid>https://xavierprat.github.io/Blog/posts/web_lotteries_bingos_for_student_games</guid>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Analysis of seven years of General Chemistry student data</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
       <link>https://xavierprat.github.io/Blog/posts/analysis_seven_years_genchem</link>

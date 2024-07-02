@@ -27,5 +27,30 @@ In my chemistry class there's always a day that I need to engage students in a d
 before the exam and don't want to introduce any new or serious content, perhaps is that weird day right before
 Thanksgiving when you are not canceling class but half of students are not attending.
 
+In any case, through the years I have been using different forms of games that can carry a tangential pedagogical value
+and that can engage students in a time when their focus is probably at their best.
+
+For example, for a first semester chemistry (CHEM1331 - so a little different) we run a bingo game.
+The game takes place after students have learned their functional
+groups, skeletal structure, NMR peaks and IR signals.
+
+* To generate the bingo cards you need
+
+  - a list of compound names or properties: https://chem.r.umn.edu/chem1331/bingo/list_compounds 
+  - a python script that generates the cards by building a table with randomized names: http://chem.r.umn.edu/chem1331/bingo/parse.py 
+
+* A site that randomly chooses compounds. A developed different ones with different types of animations
+
+  - Bingo 1 site: Uses jQuery to spin through a wheel of compounds http://chem.r.umn.edu/chem1331/bingo/
+  - Bingo 2 site: The next one does not spin, it just fills out a table so that no compound is ever repeated (which was a problem with the first site) http://chem.r.umn.edu/chem1331/bingo/bingo.html 
+  
+As you can see, the site requires having generated the 2d structures. Nowadays you may be better off using RDKit to convert names to 2d images (https://www.rdkit.org/docs/GettingStartedInPython.html). I think I generated that group of images by querying the NIC server. For example, the URL https://cactus.nci.nih.gov/chemical/structure/methylamine/image returns an image of methylamine. So, with the terminal you can build a script that downloads all those files such as:
+```
+cat list|while read mol
+do
+	curl -o $mol.gif https://cactus.nci.nih.gov/chemical/structure/$mol/image
+done
+```
+
 ```{r, message= FALSE, warning=FALSE}
 ```
