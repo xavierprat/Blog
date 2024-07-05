@@ -7,7 +7,28 @@
     <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Encounters with alien life</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/encounters_with_alien_life</link>
+      <description>A vast distance in space, time, and intellect</description>
+      <category>Essay</category>
+      <guid>https://xavierprat.github.io/Blog/posts/encounters_with_alien_life</guid>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/encounters_with_alien_life/pic4_all.png" medium="image" type="image/png" width="1704" height="1192"/>
+    </item>
+    <item>
+      <title>The joyful struggle</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/the_joyful_struggle</link>
+      <description>A personal view on wellness</description>
+      <category>Essay</category>
+      <category>Wellness</category>
+      <guid>https://xavierprat.github.io/Blog/posts/the_joyful_struggle</guid>
+      <pubDate>Wed, 03 Jul 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/the_joyful_struggle/thecycle.png" medium="image" type="image/png" width="1440" height="432"/>
+    </item>
     <item>
       <title>Querying Google Scholar with Python</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>
@@ -17,6 +38,7 @@
       <category>Javascript</category>
       <guid>https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python</guid>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/Querying_GoogleScholar_with_Python/chart.png" medium="image" type="image/png" width="1162" height="1082"/>
     </item>
     <item>
       <title>Calculate the Potential of Mean Force from MD of an enzymatic reaction</title>

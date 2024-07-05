@@ -2,6 +2,7 @@
 title: "Querying Google Scholar with Python"
 description: |
   And build an always current list of publications in your department
+preview: chart.png
 author:
   - name: Xavier Prat-Resina 
     url: https://pratresina.umn.edu
