@@ -27,14 +27,14 @@ ChatGPT says that "The Fermi Paradox is the apparent contradiction between the h
 Enrico Fermi was known for many things, among them he was known to guesstimate a number, a back of the envelope
 calculation to know the ballpark or magnitude of a quantity. I don't agree with the Fermi paradox, mostly because we only know of one single planet with life and we don't have any serious theory that explains
 the formation of life (abiogenesis), so we are trying to do statistics with a sample of n=1.
-Here I want to lay out also that even if the formation of life is guaranteed given the 
-conditions of composition and temperature of a planet, there are robust statistical estimations
+Here I want to lay out also that even if the formation of life is guaranteed (given a set of 
+conditions of composition and temperature of a planet), there are robust statistical estimations
 that explain why we haven't seen anyone yet.
 
 
 # The vast distance
 
-The dimensions of the universe are too large and information (even matter) travels way too slow. 
+The dimensions of the universe are too large and information (light or matter) travels way too slow. 
 So the first explanation is that we have not seen anyone yet because we are too far away and cannot hear each other.
 
 Some numbers to show such vastness:
@@ -50,13 +50,9 @@ Some numbers to show such vastness:
   <figcaption>Distance</figcaption>
 </figure>
 
-So this is the first barrier for contact, the very vastness of space and the time that it takes to travel it. There may not have been contact because:
-
-- Technology limitations: spaceships not fast enough
-- Speed of light and matter limitations: E=mc2
-- Species limited lifespan
-- Time since technology was developed
-
+So this is the first barrier for contact, unless we find a
+[wormhole](https://en.wikipedia.org/wiki/Wormhole) in spacetime or a parallel universe, 
+the very vastness of space and the time that it takes to travel becomes too large. 
 
 # Time: The time window of civilization seems unlikely and short
 
@@ -65,7 +61,8 @@ So this is the first barrier for contact, the very vastness of space and the tim
   <figcaption>Window of civilization</figcaption>
 </figure>
 
-Considering only alien life capable of civilization they will go through 3 stages:
+Any form of life capable of civilization may go through 3 stages:
+
 1. Pre-technology period
 2. Technology period
 3. Decline or self-destruction
@@ -74,15 +71,23 @@ Two civilizations will hear from each other only during the technology period.
 Now we are getting outside of physics and more perhaps into History or Anthropology. In other words,
 we have too look into how civilizations are created, evolve, perhaps reach a technological state, and eventually fade.
 
-For any living society as it progresses it will reach a third stage, the most likely is destruction but  it can plateau in 4 different ways.
+The hypothesis here is that any living society, as it progresses, 
+it will reach a third stage when technology becomes so powerful or the expo that it evolves or plateaus to something else.
 
-1. It never achieves the technology for space exploration and communication and remains in a pre-technology stage.
+My guess is that such change or plateau can happen in 4 different ways.
+
+1. It never achieves the technology for space exploration and communication and remains in a pre-technology stage. This seems to me very likely. I don't see in Darwinian biology any evidence
+that humans had to have such supremacy and allowed to reach a technology state. The fact that after
+4.5E9 years of life on earth only the last 2E4 have had human technology seems a rare event. It took too 
+long to be necessary or spontaneous,
+so my vote is that this option is the most frequent.
+
 2. An external factor ends its civilization: An astronomical (meteor), biological (pandemic) or environmental (drought, flood...) just prevents them to continue or severely halts its progress
+
 3. Self-destruction: the very genes making us a superior species are a threat to ourselves.
 The survival and selfish genes which made us survive and thrive are now threatening our self-destruction. 
 A note on self-destruction: A quote attributed to Albert Einstein says "I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones."
-
-One should expect technology to evolve faster than evolution, so our rudimentary genes are not
+ One should expect technology to evolve faster than evolution, so our rudimentary genes are not
 altruistic enough to deal with nuclear bombs and a worldwide common good. This is why humans are a threat to
 themselves.  The only possible escape from destruction is if our primitive genes are Replaced by AI. 
 
@@ -93,8 +98,9 @@ If technology provides all the primitive genetic needs maybe a civilization will
 Will we be connected to VR worlds with VR
 experiences and injected drugs to make us feel all what we desire
 while our bodies linger? This is the decline of the Roman Empire but without a barbaric invasion.
+There's a scene in the Wall-e movie that shows what I mean (https://www.google.com/search?q=wall-e+scene+with+sedentary+people)
 
-So, we should accept that there may be a window of technology (rather than a lasting stage of technology).
+In conclusion, we should accept that there may be a window of technology (rather than a lasting stage of technology).
 The universe is 15 billions years old (15E9), there’s been life on earth for 4 billions (4E9). The formation of life may not be rare, but the window of technology may be rare and short considering that it’s been only 150 years since we’ve had radio technology and 50 since space travel and we’re already talking about potential civilization collapse. 
 
 
@@ -108,6 +114,7 @@ The universe is 15 billions years old (15E9), there’s been life on earth for 4
 And now we are in the philosophical realm. Different species do not perceieve reality the same
 way.
 This goes in the direction of 
+
 1. There are things we know
 2. There are things we know we don't know
 3. There are things we don't know we don't know
@@ -140,6 +147,6 @@ it does not seem to me that it is a paradox that we have not seen (or recognized
 
 <figure class="image">
   <img src="pic4_all.png">
-  <figcaption></figcaption>
+  <figcaption>Fermi's paradox is not a paradox. Even if we assume that life is frequent in the universe there are 3 groups of reasons why we have not heard from each other.</figcaption>
 </figure>
 

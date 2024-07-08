@@ -15,10 +15,10 @@
     {
       "path": "index.html",
       "title": "Prat-Resina's blog",
-      "description": "A list of musings, half-cooked analysis, and reports that could have been submitted to a journal... and never did.\n",
+      "description": "A list of musings, half-cooked analysis, and reports that could have been submitted to a journal... and never were.\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2024-07-06T14:27:28-05:00"
+      "last_modified": "2024-07-08T09:18:13-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
