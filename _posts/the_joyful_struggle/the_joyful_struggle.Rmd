@@ -73,7 +73,7 @@ We are not going to spend a lot of time so that we don’t lose our focus on our
 Notice in this graph that if at 45 you cannot do certain things, by 75 you will be incapable of engaging in the cycle of challenge that I’m describing below
 
 <figure class="image">
-  <img src="healthspan.png">
+  <img src="healthspan.png" >
   <figcaption>Like a retirement account, the savings of today are the benefits of tomorrow</figcaption>
 </figure>
 
@@ -107,14 +107,22 @@ But first we have to identify the obstacles that we will encounter and be able t
 
 ## 3.1 Maslow Pyramid of Cravings and St Thomas Aquinas’ idols.
 
+<table>
+<td>
+<td>
 <figure class="image">
   <img src="maslow.png">
   <figcaption>Maslow's pyramid of needs</figcaption>
 </figure>
+</td>
+<td>
 <figure class="image">
   <img src="stthomas.png">
   <figcaption>St. Thomas Aquinas</figcaption>
 </figure>
+</td>
+</tr>
+</table>
 
 In the popular Maslow pyramid of needs not all levels are created the same. The top of the pyramid is not self-destructive, while the lower ones are. Here’s where I want to introduce St Thomas Aquinas’ four idols, four false gods. They are:
 
@@ -132,7 +140,7 @@ This system in place is what I call the cycle of pleasure and pain, the cycle of
 
 ## 3.2 The dynamic cycle.
 
-The key of the proposed cycle is homeostasis, it combines the sharpening with the necessary recovery. It can be understood as the perfect combination of hedonism and eudemonia, the combination may be different for different people, but both must be present. They are both equally important and one cannot exist without the other. It incorporates all our hedonic needs but it places them under strict restrictions of time, magnitude and metacognition. In other words, you must manage your cravings and your emotions instead of letting them manage you. Metacognition or at least your social boundaries will turn those cravings into experiences. Arthur Brooks says that pleasure becomes enjoyment once you add people and memories, but that seems to me a personal choice. The important part is that even these more “civilized experiences” cannot be constantly present, we must go back to a baseline, to a homeostasis through the cycle of pain and pleasure, sharpening and healing or using endurance training terms, adaptation and recovery.
+The key of the proposed cycle is homeostasis, it combines the sharpening with the necessary recovery. It can be understood as the perfect combination of hedonism and eudaimonia, the combination may be different for different people, but both must be present. They are both equally important and one cannot exist without the other. It incorporates all our hedonic needs but it places them under strict restrictions of time, magnitude and metacognition. In other words, you must manage your cravings and your emotions instead of letting them manage you. Metacognition or at least your social boundaries will turn those cravings into experiences. Arthur Brooks says that pleasure becomes enjoyment once you add people and memories, but that seems to me a personal choice. The important part is that even these more “civilized experiences” cannot be constantly present, we must go back to a baseline, to a homeostasis through the cycle of pain and pleasure, sharpening and healing or using endurance training terms, adaptation and recovery.
 
 <figure class="image">
   <img src="thecycle.png">
@@ -160,7 +168,7 @@ If the three areas are in contradiction (you can’t workout, or can’t create,
 
 In this sense a job can be a good hobby, and its rewards will give you satisfaction in the cycle used above, but it will be the connecting/transcendent/beauty part of that job (the one that allows you to be in the zone) that will give you meaning and purpose. This is the true eudaimonic life.
 
-Also, as we said above because both physical and mental activities can become addictive themselves. People who just focus on their creative work or their physical performance will fall short. The artists or scientists that do their work because they are seeking power or recognition, or because they are addicted to the thrill, they are just on the productivity treadmill and are serving one of the Aquinas’ “false gods”. That is, the moment that this task detaches us from our spiritual generosity it becomes addicting and to be avoided. One cannot be addicted to being generous, because when you are connected to nature, the past, and to others you stop having control, this is why  saying that it’s like “dancing to a music” is a good metaphor of letting yourself go and be in the zone…
+Also, as we said above because both physical and mental activities can become addictive themselves. People who just focus on their creative work or their physical performance will fall short. The artists or scientists that do their work because they are seeking power or recognition, or because they are addicted to the thrill, they are just on the productivity treadmill and are serving one of the Aquinas’ “false gods”. That is, the moment that this task detaches us from our spiritual generosity it becomes addicting and to be avoided. One cannot be addicted to being generous, because when you are connected to nature, to beauty, and to others you stop having control, this is why  saying that it’s like “dancing to a music” is a good metaphor of letting yourself go and be in the zone…
 
 # Bibliography
 
