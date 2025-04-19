@@ -7,7 +7,17 @@
     <description>A list of musings, half-cooked analysis, and reports that couldn't have been submitted to a journal... and never did.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 03 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Pedagogies of delivery</title>
+      <dc:creator>Xavier Prat-Resina</dc:creator>
+      <link>https://xavierprat.github.io/Blog/posts/pedagogies_of_delivery</link>
+      <description>Brief list of strategies that the Chemistry faculty team has learned through the years</description>
+      <category>Teaching and learning</category>
+      <guid>https://xavierprat.github.io/Blog/posts/pedagogies_of_delivery</guid>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://xavierprat.github.io/Blog/posts/pedagogies_of_delivery/chem.png" medium="image" type="image/png" width="959" height="264"/>
+    </item>
     <item>
       <title>Encounters with alien life</title>
       <dc:creator>Xavier Prat-Resina</dc:creator>

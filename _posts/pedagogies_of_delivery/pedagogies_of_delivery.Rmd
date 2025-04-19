@@ -1,0 +1,92 @@
+---
+title: "Pedagogies of delivery"
+description: |
+  Brief list of strategies that the Chemistry faculty team has learned through the years
+preview: chem.png
+author:
+  - name: Xavier Prat-Resina 
+    url: https://pratresina.umn.edu
+    affiliation: University of Minnesota Rochester
+    affiliation_url: https://r.umn.edu
+    orcid_id: 0000-0002-1380-6025
+categories:
+  - Teaching and learning
+date: 04-19-2025
+output:
+  distill::distill_article:
+    toc: true
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+At UMR we are a diverse group of [faculty members with different expertise and teaching styles](https://sites.google.com/r.umn.edu/chemistry-at-umr/faculty). However, through the years we have recognized some best practices and pedagogies "that work" and that we all agree on. Here's a list of them (this list is can change any time, of course).
+
+# The space
+
+Our classrooms are designed for active learning. Students sit around tables facing each other. There is no "back or front of the class". There are whiteboards all around the walls, projectors on each wall, and huddle boards by each table. The largest classroom sits 60 students. ([see some of us in our classrooms here](https://www.youtube.com/watch?v=U5Hhs3acQnQ))
+    
+# Different flavors of flipped classroom
+
+Most of our class sessions include some videos developed by our faculty that students need to watch ahead of class time. The goal is to maximize student preparation so that class time is maximized for solidifying concepts and hands-on activities. That being said, we recognize that it takes several times to listen to a topic before one can even practice it. This is why most of our class sessions are delivered  following an alternating lecture/activity model:
+    
+    *   The instructor gives mini-lecture as a quick overview of the video (5-10 minutes)
+        
+    *   Students work in groups for a hands-on activity (5-10 minutes)
+        
+    *   The instructor solves the problem for everyone (3 minutes) 
+        
+
+Looping through this sequence several times during class time allows everyone to stay alert and avoid students wavering their interest or stalling their learning.
+
+# Team teaching
+
+Knowing that some students may connect better with different faculty member's style or personality we prefer to have larger classes with two faculty members in the room instead of a smaller section with one single faculty member. The team teaching approach has each day a lead and a support member. The faculty member who is not leading that day is moving around helping students with activities. Sometimes the support member will bring up to the whole class a question that students are brewing or a misconception that we perceive happening. Sometimes we orchestrate a discussion or a challenge among the two faculty members so that students can see examples of scientific discussions.  Also, because being a good educator is a life-long endeavor it helps seeing how other faculty teach. 
+
+Even outside the course, we are a team of chemists who have a shared ownership of the curriculum. We decide together what instructor will teach what course. Many of us will rotate around the different semesters trying to accommodate preferences, expertise, and personal circumstances.
+    
+# Relationship with our students and sense of belonging
+
+It is important that students "buy into" our UMR model, and it is fundamental for them to develop a sense of belonging to the course cohort and to our institution. This approach can be understood using the three classical legs of Aristotelian rhetoric: logos, pathos, ethos.  The first obvious item is "the logos" which refers to faculty needing to build a good explanation and a convincing argument, but the pathos and ethos also contribute to communication:
+    
+1. **Pathos**: Teaching tools to emotionally connect with students
+        
+  - 1.1 We learn all of our **students names** so that they know that they matter. We try to get to learn their struggles and preferences.
+            
+  - 1.2 **We notice** if a student is not present or acting out of their normal. We reach out to them asking about their wellbeing.
+            
+  - 1.3 Walking the line between **leniency and fairness**: We make exceptions to the rules if students ask for help. In some cases the leniency is ad hoc if a student asks for an extension or makeup an absence, but often in order to make it fair to everyone it is already encoded in the syllabus (students who do not dare to ask for an exception should not be penalized). For example, the lowest x number of homework is dropped (so we don't have to wait for a student to ask for an extension), the first x number of absences are excused. We don't ask questions about the authenticity of their excuse. It's better for everyone to give the benefit of the doubt and show that you trust them.
+            
+  - 1.4 Faculty become students' **mentors**. Because of our single undegraduate degree and the relative small campus size a faculty member may see the same student several semesters. We will witness students grow through the years at UMR, from first-year until graduation. Often students seek that connection with a particular faculty member and such mentor/mentee relationship will make it easy to talk about future career options and writing letters of recommendation.
+            
+2. **Ethos**: Teaching with authenticity and respect.
+        
+  - 2.1 **We get excited** about Chemistry and about learning. Such excitement is visible and contagious and students should look forward to coming to class.
+            
+  - 2.2 **Respect is earned**, our faculty is not aloof and distant. Faculty needs to earn students' respect. Our "high contact" teaching model makes students really get to know their faculty. It is important to be genuine, authentic and honest. We avoid being disparaging towards students. Faculty have to convince students that we are fair and have their best interest in mind, even when their performance is not optimal.
+            
+# Knowing how learning happens:
+    
+1. We structure our content with **scaffolding** to diminish students cognitive load. "Start easy and slow to go far and deep". We start our modules with simple foundations and keep adding layers with multiple summative assessment along the way. Also, each class session should have a nuclear concept around it. The class starts with that nuclear concept and we add layers in subsequent activities.
+        
+2. **Multiple opportunities**, rewarding reattempts, and **instant feedback** encourages a **growth mindset** and allows **chunking**.
+        
+  - 2.1 What is the right amount of reattempts in a homework or a quiz? Too few and they won't be allowed to make mistakes, and to avoid a bad grade they may even take shortcuts. Too many and some students may postpone working on it or trying without carefully thinking about it.
+            
+  - 2.2 Using concepts from dual-process theory we can split thinking into type 1 thinking (quick subconscious) and type 2 (slow and logical). For example, when drawing a reaction mechanism in organic chemistry one needs to have acquired "pre-chunked patterns" using type 1 thinking so that one doesn't need to think how many bonds are connected to a carbon or oxygen so that one can spend the slow type 2 thinking on the actual task (drawing the mechanism). In other words, our courses have assessment with multiple attempts and instant feedback that encourage practice with the objective to "chunk" some fundamental concepts that need to be acquired as type 1 thinking.
+            
+3. Separating **low-order from high-order cognitive tasks**. Chemistry has a list of skills that are clearly fundamental and that students must master before attempting higher level tasks (think Bloom's taxonomy). Using the same example as above, drawing an organic reaction mechanism requires having mastered concepts such as skeletal representation, formal charge...etc. In some of our courses we split the exams into two parts, a low-level high-practice quiz (see [milestones](https://sites.google.com/r.umn.edu/chemistry-at-umr/innovations/milestones)) usually graded with mutliple attempts and "specifications grading" and a later higher-level, problem solving or open-ended written exam.
+        
+# Preparing our students for citizenship and accountability
+
+Why is attendance and participation so important? We are very intentional about our "UMR model". In this model students and faculty are both present, interacting, involved, and creating an environment of learning. We try to avoid a transactional view of education where students pay their tuition and get a service. Our "high contact" learning model requires that students are physically present and ready to participate in class. This is why all of our courses have a participation/attendance grade and missing too many class sessions (regardless of the cause) will fail the course. Extrapolating to a larger scale of human growth, we believe that showing up ready, being present and involved with others is a fundamental skill for any adult citizen of our society.
+    
+# JustAsk 
+
+In order to minimize the barrier that students perceive when they have a question, we try make faculty more available for questions. Faculty's office hours are not in their office but in a neutral space that we call "[justAsk](https://r.umn.edu/academics-research/academic-resources/just-ask)". In this justAsk space students can work on their own and if they have a question they can approach the faculty member who is sitting near by. Alternatively students can go talk to the faculty member in groups or chat about any other problem or concern.
+    
+# Undergraduate Academic Assistants (UAA)
+
+Teaching and mentoring is a great opportunity for growth. Many students who have taken the course in previous years will often apply to be our UAAs. These UAAs will often help current students during class activities or will offer help/review sessions.
+    
